@@ -29,3 +29,7 @@ Commit 23dc696 is pushed to origin/goldlens/baseline-and-first-checks. It contai
 ## Existing documentation refresh — 2026-10-01
 
 Client requested surgical additions. Existing README/SETUP variants now identify Jugalbandi, correct primary storage to SQLite, and point to the handbook. Existing architecture, quickstart, workflow, testing and CLAUDE guides link to current facts and approval boundaries. README owns the current stack table. No product/configuration change or test rerun is implied by this documentation pass; previous runtime blockers remain.
+
+## Questionnaire checkpoint — 2026-10-01
+
+Client answers are recorded in DECISIONS_AND_APPROVALS.md. Product remains an extension, not a rewrite. Email-link sign-in, user invitations, no support content access, per-resume external-AI consent, BYOK plus optional disabled-until-funded shared allowance, 30-day retention and seven-day recovery, evidence-first reports and separate edit revisions are selected. Clarify retention clock/recovery interaction and invitation limits before implementation. Single-baseline history request still requires a concrete recovery/publication-safe proposal and informed approval; no history was replaced.

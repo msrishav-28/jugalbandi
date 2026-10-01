@@ -18,7 +18,7 @@ Initial “—” means not performed/not assigned, never success. Source files 
 
 | Task | Phase | Priority | Requirements | Dependencies | Gate categories | Owner | Reviewer | State | Evidence | Verified date | Revision/fingerprint | Next action or blocker |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-003 | 2026-10-01 | DOCSET-2026-10-01-v3 | Handbook updated for repository execution and Jugalbandi name; product remains unverified |
+| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-003 | 2026-10-01 | DOCSET-2026-10-01-v4 | Handbook updated for repository execution and Jugalbandi name; product remains unverified |
 | [GL-BASE-001](WORK_PACKAGES.md#gl-base-001) | M0 | P0 | GL-R-002 | GL-DOCS-001 | G-BASE | Unassigned | Unassigned | BLOCKED | — | — | — | Revalidate handbook; remote provenance inspected and separate clone acquired |
 | [GL-BASE-002](WORK_PACKAGES.md#gl-base-002) | M0 | P0 | GL-R-003 | GL-DOCS-001 | — | Unassigned | Unassigned | BLOCKED | EV-BRAND-001 | — | — | Python/dependencies installed; native-library policy and production font fetch block full baseline |
 | [GL-BASE-003](WORK_PACKAGES.md#gl-base-003) | M0 | P0 | GL-R-068 | GL-BASE-001, GL-BASE-002 | — | Unassigned | Unassigned | NOT_STARTED | — | — | — | Verify dependencies and scope before claim |

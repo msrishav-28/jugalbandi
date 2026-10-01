@@ -72,3 +72,7 @@ Outcome: PASS. 2026-10-01. Commit 23dc696 (Introduce Jugalbandi branding and res
 ## EV-DOC-003 — Surgical existing-guide refresh
 
 Outcome: PASS. 2026-10-01, Node v24.17.0 / Windows; baseline dff1585 plus this documentation commit. Re-read frontend/backend manifests, Docker/Compose, API entrypoints, provider config, current localized state/branding, affected old guides and twin translations. Added current-stack table and handbook pointers; corrected Next 15/TinyDB claims and setup repository/lockfile commands. Existing architecture/history, license, credit and four source plans preserved. Validation: documentation validator; eleven validator cases including LF/CRLF; new local Markdown target/anchor checks; git diff --check; git diff path review restricted to Markdown and fingerprint JSON. No application checks rerun for documentation-only edits. Earlier runtime outcomes remain dated EV-BRAND-001, not fresh passes. Author self-review only.
+
+## EV-DECISIONS-001 — Questionnaire record
+
+Outcome: REVIEWED_WITH_LIMITS. 2026-10-01. Recorded client answers without changing product behavior. Static search for next-auth/NextAuth, Google sign-in/OAuth, authlib, Clerk and Supabase across manifests/frontend app/components/backend app found no Google sign-in integration; this is not a full security audit. Documentation consistency and validator cases rerun for the updated decision record; product tests not rerun.

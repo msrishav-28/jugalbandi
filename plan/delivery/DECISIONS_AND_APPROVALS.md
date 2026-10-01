@@ -107,3 +107,28 @@ History replacement is requested but not informed-approved. The inspected main h
 | ID | Status | Authorized action | Evidence | Explicit boundary | Gate coverage |
 |---|---|---|---|---|---|
 | A-DOC-002 | APPROVED | Add current Jugalbandi context and surgically correct outdated stack/setup statements in existing project guides | Client: “update the old docs ... surgically as addition modifying only what is needed” | Documentation only; preserve historical plans, credits, application code, settings and deployment behavior | A-DOC-001 |
+
+## Client questionnaire answers — 2026-10-01
+
+These decisions supersede conflicting earlier product preferences; they do not authorize destructive history replacement, spending, deployment or an unspecified security-sensitive implementation.
+
+| Topic | Confirmed direction | Implementation boundary / unresolved detail |
+|---|---|---|
+| Existing foundation | Extend working product; preserve editor, tailoring, tracker, wizard and PDF | Focus verification on changed areas and their dependents; prior functionality does not prove new changes safe |
+| History presentation | Client wants one large baseline commit, then ordinary incremental commits | Conflicts with retaining visible existing history; retain offline recovery and attribution. Exact remote replacement and publication controls need informed approval. Do not promise GitHub contributor/fork metadata disappears |
+| Beta size | 50 invited users, approximately 5 simultaneous | Planning assumption, not measured capacity |
+| Schedule | Quality first; no fixed date | No deadline-driven weakening of checks |
+| Budget | Undecided | No paid service or shared AI allowance enabled without approved cap |
+| Invitations | Existing users may invite others | Invite allowance and overall beta cap enforcement still to specify |
+| Sign-in | Email sign-in links; no Google sign-in | Static search of current app/manifests found no Google sign-in integration to remove; provider/session/recovery specification still required |
+| Staff access | No support access to resume content | Applies to owner-operated support too; no support-view feature. Infrastructure access boundaries need explicit design; do not promise cryptographic operator blindness |
+| External AI consent | Ask on first external AI use per resume | Define withdrawal and changed-provider/input scope; consent remains separate from owning an API key |
+| AI payment | BYOK primary, with optional platform-funded allowance | Platform-funded mode disabled until costs/provider limits approved; never silently fall back to paid shared credentials |
+| Retention | Automatic deletion after 30 days | Start point and interaction with seven-day recovery unresolved |
+| User deletion | Seven-day recovery period | Define trash access, job cancellation, restoration and backup expiry before making promises |
+| Report | Evidence/findings first; scores secondary | No fabricated findings or zero scores for unavailable dimensions |
+| Accepted edits | Separate editable revision; original preserved | Specify whether revisions share original retention deadline |
+| Operations | Client handles support, incidents and spending alerts | Existing provider/domain accounts not yet supplied |
+| Delivery | Push checkpoints autonomously to feature branch; approval before merge/release | No main/tag push, publishing change or history replacement implied |
+
+Original wording: client answered questionnaire choices on 2026-10-01 and said “push changes on your own”. Resolve retention and invitation parameters before dependent implementation. Continue independent approved work; do not infer permission to weaken endpoint protection or expose the existing single-installation app publicly.
