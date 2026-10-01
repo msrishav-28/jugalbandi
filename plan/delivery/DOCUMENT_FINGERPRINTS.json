@@ -1,5 +1,5 @@
 {
-  "id": "DOCSET-2026-10-01-v4",
+  "id": "DOCSET-2026-10-01-v5",
   "recorded_at": "2026-10-01",
   "scope": "Stable documentation inputs; tracker/evidence/handoff are mutable and excluded; this manifest is not a runtime product verification.",
   "files": {
@@ -7,8 +7,8 @@
     "plan/delivery/AI_EVALUATION.md": "da3410d5a2eecc6bd38b63bf1b3330b0d7f33ea092446aca3ce3982458cddd83",
     "plan/delivery/ARCHITECTURE.md": "8e539ce999d6158ad0819d501abddde19b02845fe1a6cc69f66cab6e806bc44f",
     "plan/delivery/CONTRACTS.md": "d6f2e993cb77873489876449c01d39c9f0155b633e6ff665adbc92b9309351f7",
-    "plan/delivery/DATA_AND_PRIVACY.md": "724f877a914e041d7029d4e12840db2cf10e4731e6d2e5e812250fe08909d30f",
-    "plan/delivery/DECISIONS_AND_APPROVALS.md": "65a7ae7b5c34942727d9bb67f1b8a58bae24d9c026ffd39356f1e92d25b5ba1c",
+    "plan/delivery/DATA_AND_PRIVACY.md": "742dd4a1bc755674203ac1b778def0fd673e26d20234a006cffe5dea1109d796",
+    "plan/delivery/DECISIONS_AND_APPROVALS.md": "d74a320a1dbf93e5bbadd7e274a75d84eeb7fad6138a8ac99286426d24e3939c",
     "plan/delivery/OPERATIONS.md": "bb2b36c8861765385d143db4cf7beaf5c58dfb88e2c1295c6d25400fad9a6b43",
     "plan/delivery/PROJECT_MAP.md": "f517d5f659f0038c18e0d2bcef0d2c2085d508a0b670d24e447f2c385b4b5142",
     "plan/delivery/README.md": "932b637e4a8114ec94a11873759a54e751652105f99a3e7c3ebc05558b027523",

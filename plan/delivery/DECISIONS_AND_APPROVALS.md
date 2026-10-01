@@ -119,16 +119,20 @@ These decisions supersede conflicting earlier product preferences; they do not a
 | Beta size | 50 invited users, approximately 5 simultaneous | Planning assumption, not measured capacity |
 | Schedule | Quality first; no fixed date | No deadline-driven weakening of checks |
 | Budget | Undecided | No paid service or shared AI allowance enabled without approved cap |
-| Invitations | Existing users may invite others | Invite allowance and overall beta cap enforcement still to specify |
+| Invitations | Existing users may invite others | Three invitations per user initially; enforce the overall 50-user beta cap |
 | Sign-in | Email sign-in links; no Google sign-in | Static search of current app/manifests found no Google sign-in integration to remove; provider/session/recovery specification still required |
 | Staff access | No support access to resume content | Applies to owner-operated support too; no support-view feature. Infrastructure access boundaries need explicit design; do not promise cryptographic operator blindness |
 | External AI consent | Ask on first external AI use per resume | Define withdrawal and changed-provider/input scope; consent remains separate from owning an API key |
 | AI payment | BYOK primary, with optional platform-funded allowance | Platform-funded mode disabled until costs/provider limits approved; never silently fall back to paid shared credentials |
-| Retention | Automatic deletion after 30 days | Start point and interaction with seven-day recovery unresolved |
+| Retention | Automatic deletion after 30 days | Clock starts at upload; opening/editing does not extend it; automatic expiry enters seven-day recovery |
 | User deletion | Seven-day recovery period | Define trash access, job cancellation, restoration and backup expiry before making promises |
 | Report | Evidence/findings first; scores secondary | No fabricated findings or zero scores for unavailable dimensions |
-| Accepted edits | Separate editable revision; original preserved | Specify whether revisions share original retention deadline |
+| Accepted edits | Separate editable revision; original preserved | Original and its revisions share the upload-based lifecycle and recovery window |
 | Operations | Client handles support, incidents and spending alerts | Existing provider/domain accounts not yet supplied |
 | Delivery | Push checkpoints autonomously to feature branch; approval before merge/release | No main/tag push, publishing change or history replacement implied |
 
-Original wording: client answered questionnaire choices on 2026-10-01 and said “push changes on your own”. Resolve retention and invitation parameters before dependent implementation. Continue independent approved work; do not infer permission to weaken endpoint protection or expose the existing single-installation app publicly.
+Original wording: client answered questionnaire choices on 2026-10-01 and said “push changes on your own”. Retention and invitation parameters were confirmed in the follow-up below. Continue independent approved work; do not infer permission to weaken endpoint protection or expose the existing single-installation app publicly.
+
+## Retention and invitations confirmed — 2026-10-01
+
+Client answered “1 A, 2 A, 3A”: 30 days from original upload, with no extension for opening/editing; at automatic expiry the resume and its revisions enter a seven-day recovery window, allowing up to 37 days in live storage; three invitations per user initially, subject to the overall 50-user beta limit. Manual deletion also has the already-selected seven-day recovery period. Backup expiry remains a separate hosting policy, not an immediate-erasure promise. These are confirmed product rules; physical deletion, account implementation, paid infrastructure and history replacement remain subject to their scoped gates.

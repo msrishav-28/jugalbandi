@@ -7,7 +7,7 @@ Target specification, 2026-09-30. No database or privacy behavior is changed by 
 | Resource | Ownership and relations | Sensitive contents | Retention / deletion |
 |---|---|---|---|
 | Identity/profile/preferences | Account; provider subject unique | Email, preferences, consent | Account lifecycle; provider-side deletion documented |
-| Resume and immutable revisions | Account; parent revision/resume same owner | Original and edited career content | User retention choice; descendants handled by explicit policy |
+| Resume and immutable revisions | Account; parent revision/resume same owner | Original and edited career content | 30 days from original upload, then seven-day recovery; revisions share this lifecycle |
 | Pages/blocks/sections/IR artifacts | Revision; same owner | Full or partial resume text, images, geometry | Tied to source revision, not independently eternal |
 | Job descriptions | Account; immutable revision | Pasted job text and optional context | Account-controlled; report dependencies tracked |
 | Analysis runs/findings/feedback | Account + resume revision + optional JD/cohort version | Evidence snippets and private judgments | Tied to source; feedback notes treated as private content |
@@ -15,7 +15,7 @@ Target specification, 2026-09-30. No database or privacy behavior is changed by 
 | Applications/attachments | Account + resume/JD relationships | Notes, letters, outreach, interview preparation | Account/resume policy with explicit dependency behavior |
 | Upload/storage manifest/export | Account + revision/operation | Object keys, checksums and rendered documents | Short temporary TTL; permanent files follow selected policy |
 | Jobs/outbox/idempotency | Account/resource references | IDs and sanitized state, never raw text by default | Bounded operational retention; scrub/revoke on deletion |
-| Platform/provider credentials | Service/admin scope; optional BYOK later | Encrypted credentials | Restricted secret store; no browser readback; separate replacement procedure |
+| Platform/provider credentials | Service/admin scope; BYOK primary; optional platform allowance only after budget approval | Encrypted credentials | Restricted secret store; no browser readback; separate replacement procedure |
 | Reference documents/consents/tags/reviews | Restricted corpus domain, contributor rights | Raw documents, proof, review notes | Consent and removal policy; never coupled to normal user opt-in |
 | Cohorts/versions/membership | Restricted provenance plus published aggregates | Membership restricted; statistics disclosure-checked | Revoke affected snapshots on withdrawal; recompute |
 | Audit/security events | Authorized operations role | Minimal event identity, action, timestamps | Approved policy; no resume content or raw secrets |
@@ -43,11 +43,13 @@ C-02 removes the need for a customer import project now. It does not authorize d
 
 Four independent purposes: one-time analysis/private storage; optional external AI processing; optional de-identified improvement telemetry; optional training/reference contribution. Never make training consent a prerequisite for analysis. A retained user resume is not a reference contribution. Explain what leaves the service, for what purpose, and which approved provider handles it.
 
-Development proposal for policy review: temporary analysis accessible for 24 hours after completion with a maximum 48 hours from upload; private storage until deletion; temporary failed/quarantined artifacts purged within 24 hours unless an approved incident hold applies. These are proposed targets, not live promises. GL-BASE-003 must approve exact retention values, audit retention and backup expiry before real uploads. Missing approved policy blocks hosted ingestion; it must not mean unlimited retention.
+Confirmed client policy (2026-10-01): resumes remain active for 30 days from original upload; opening or editing does not extend the deadline. Automatic expiry moves the resume and its revisions into seven-day recovery, allowing up to 37 days in live storage. Manual deletion also enters seven-day recovery. Trash must be excluded from normal analysis/export and accessible only through owner-authorized recovery controls. Restoration must not silently restart the upload clock; specify post-expiry restoration behavior before implementation. Failed/quarantined temporary artifacts, operational audit records and backup expiry require separate approved schedules. No policy here is implemented yet; missing lifecycle controls block hosted ingestion.
 
 Record consent version, purpose, time and withdrawal. Check consent at scheduling and immediately before provider dispatch. Withdrawal fences queued calls. An already transmitted call cannot be recalled; record/disclose the provider's actual retention/deletion limitations. Do not promise cloud-private processing solely from an SDK setting.
 
 ## Deletion procedure
+
+For recoverable resume deletion, first enter the owner-scoped seven-day recovery state, revoke normal access and fence running work; retain recoverable content during that window. Execute physical removal steps 2–7 below after recovery expires. Keep recovery-state access separate from normal document access. The procedure must distinguish scheduled removal from completed removal.
 
 1. Reauthenticate where appropriate; atomically mark deletion pending, revoke new access and advance a generation/fence token.
 2. Enumerate an authoritative manifest: originals, revisions, IR, pages, thumbnails, embeddings, findings, attachments, exports, caches, previews and in-flight work.
@@ -57,7 +59,7 @@ Record consent version, purpose, time and withdrawal. Check consent at schedulin
 6. Verify object inventory and relationship counts. Record independent stage results and retries. Confirm live-system deletion only after all required stages succeed.
 7. State backup expiry separately. On restore, apply deletion tombstones before restoring user access; expired consent/reference publication must not reappear.
 
-Account deletion includes user-owned jobs, settings, provider BYOK if later enabled, browser account caches on next session and identity-provider action. Do not claim remote browsers can be wiped while offline. User-facing wording must explain what the service can revoke versus previously downloaded files.
+Account deletion includes user-owned jobs, settings, provider BYOK credentials, browser account caches on next session and identity-provider action. Do not claim remote browsers can be wiped while offline. User-facing wording must explain what the service can revoke versus previously downloaded files.
 
 ## Reference governance
 

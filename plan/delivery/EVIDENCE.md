@@ -76,3 +76,7 @@ Outcome: PASS. 2026-10-01, Node v24.17.0 / Windows; baseline dff1585 plus this d
 ## EV-DECISIONS-001 — Questionnaire record
 
 Outcome: REVIEWED_WITH_LIMITS. 2026-10-01. Recorded client answers without changing product behavior. Static search for next-auth/NextAuth, Google sign-in/OAuth, authlib, Clerk and Supabase across manifests/frontend app/components/backend app found no Google sign-in integration; this is not a full security audit. Documentation consistency and validator cases rerun for the updated decision record; product tests not rerun.
+
+## EV-DECISIONS-002 — Retention and invitation confirmation
+
+Outcome: REVIEWED_WITH_LIMITS. 2026-10-01. Recorded client “1 A, 2 A, 3A” and reconciled the privacy specification with upload-based 30-day retention plus seven-day recovery and three invitations per user / 50-user cap. Documentation consistency and validator cases checked. No runtime policy implementation or test pass claimed.

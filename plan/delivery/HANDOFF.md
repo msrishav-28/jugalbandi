@@ -33,3 +33,7 @@ Client requested surgical additions. Existing README/SETUP variants now identify
 ## Questionnaire checkpoint — 2026-10-01
 
 Client answers are recorded in DECISIONS_AND_APPROVALS.md. Product remains an extension, not a rewrite. Email-link sign-in, user invitations, no support content access, per-resume external-AI consent, BYOK plus optional disabled-until-funded shared allowance, 30-day retention and seven-day recovery, evidence-first reports and separate edit revisions are selected. Clarify retention clock/recovery interaction and invitation limits before implementation. Single-baseline history request still requires a concrete recovery/publication-safe proposal and informed approval; no history was replaced.
+
+## Confirmed follow-up — 2026-10-01
+
+Retention clock, automatic-expiry recovery and invitation limits are now resolved: original upload +30 days active, +7 days recovery for resume/revisions; opening/editing does not extend the deadline; three invitations per user with overall 50-user cap. This supersedes the earlier request to clarify those choices. DATA_AND_PRIVACY.md now reflects the selected policy. Implementation still needs concrete lifecycle/account contracts, including restoration after active expiry, and existing scoped approvals. No data was deleted or application behavior changed.
