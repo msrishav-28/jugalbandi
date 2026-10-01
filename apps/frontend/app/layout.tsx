@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { APP_NAME } from '@/lib/config/version';
 import { Geist, Noto_Sans_JP, Noto_Sans_KR, Noto_Sans_SC, Space_Grotesk } from 'next/font/google';
 import './(default)/css/globals.css';
 
@@ -49,9 +50,9 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'Resume Matcher',
-  description: 'Build your resume with Resume Matcher',
-  applicationName: 'Resume Matcher',
+  title: APP_NAME,
+  description: `Build your resume with ${APP_NAME}`,
+  applicationName: APP_NAME,
   keywords: ['resume', 'matcher', 'job', 'application'],
 };
 

@@ -1,3 +1,11 @@
+# Jugalbandi
+
+Jugalbandi builds on Resume Matcher. The current code supports resume creation, tailoring, editing, application tracking and PDF export. Private accounts and the planned document analyzer are not implemented or released yet.
+
+Start with [the delivery handbook](plan/delivery/README.md), [current task tracker](plan/delivery/TRACKER.md), and [handoff](plan/delivery/HANDOFF.md). Original upstream documentation and credit follow; upstream links describe the foundation, not a Jugalbandi hosted service.
+
+---
+
 <div align="center">
 
 [![Resume Matcher](assets/header.png)](https://www.resumematcher.fyi)

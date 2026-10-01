@@ -34,8 +34,6 @@
     "resumeDeleted": "この履歴書は削除されました。別の履歴書をアップロードするか選択してください。"
   },
   "home": {
-    "brandLine1": "履歴書",
-    "brandLine2": "マッチャー",
     "docs": "利用ドキュメント",
     "launchApp": "アプリを起動"
   },
@@ -386,7 +384,7 @@
           "website": "Webサイト"
         },
         "placeholders": {
-          "projectName": "Resume Matcher",
+          "projectName": "Jugalbandi",
           "role": "作成者",
           "years": "2023年3月",
           "github": "github.com/username/project",
@@ -1031,7 +1029,7 @@
       "upload": {
         "kicker": "既存ファイル",
         "title": "履歴書をアップロード",
-        "description": "PDF、DOC、DOCX ファイルから始め、Resume Matcher にマスタープロフィールへ解析させます。",
+        "description": "PDF、DOC、DOCX ファイルから始め、Jugalbandi にマスタープロフィールへ解析させます。",
         "action": "履歴書をアップロード"
       },
       "wizard": {

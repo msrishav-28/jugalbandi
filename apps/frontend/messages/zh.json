@@ -34,8 +34,6 @@
     "resumeDeleted": "此简历已被删除。请上传或选择另一份简历。"
   },
   "home": {
-    "brandLine1": "简历",
-    "brandLine2": "匹配器",
     "docs": "使用文档",
     "launchApp": "启动应用"
   },
@@ -386,7 +384,7 @@
           "website": "网站"
         },
         "placeholders": {
-          "projectName": "Resume Matcher",
+          "projectName": "Jugalbandi",
           "role": "作者",
           "years": "2023年3月",
           "github": "github.com/username/project",
@@ -1031,7 +1029,7 @@
       "upload": {
         "kicker": "现有文件",
         "title": "上传简历",
-        "description": "从 PDF、DOC 或 DOCX 文件开始，让 Resume Matcher 将其解析为你的主档案。",
+        "description": "从 PDF、DOC 或 DOCX 文件开始，让 Jugalbandi 将其解析为你的主档案。",
         "action": "上传简历"
       },
       "wizard": {

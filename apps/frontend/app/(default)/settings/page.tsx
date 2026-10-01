@@ -32,7 +32,7 @@ import {
   type ApiKeyProvider,
 } from '@/lib/api/config';
 import { API_URL } from '@/lib/api/client';
-import { getVersionString } from '@/lib/config/version';
+import { APP_NAME, getVersionString } from '@/lib/config/version';
 import { ToggleSwitch } from '@/components/ui/toggle-switch';
 import { useStatusCache } from '@/lib/context/status-cache';
 import { Button } from '@/components/ui/button';
@@ -1436,13 +1436,7 @@ export default function SettingsPage() {
         {/* Footer */}
         <div className="bg-secondary p-4 border-t border-black flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Image
-              src="/logo.svg"
-              alt="Resume Matcher"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
+            <Image src="/logo.svg" alt={APP_NAME} width={20} height={20} className="w-5 h-5" />
             <span className="font-mono text-xs text-steel-grey">
               {getVersionString().toUpperCase()}
             </span>
