@@ -1,5 +1,8 @@
 # Resume Matcher Setup Guide
 
+> **Jugalbandi update — 2026-10-01:** This project extends Resume Matcher; upstream credit and historical material remain. Start with the [delivery handbook](plan/delivery/README.md) and [current evidence](plan/delivery/EVIDENCE.md). GoldLens is the historical planning name. Private accounts, PostgreSQL and the document analyzer are planned, not available in this code yet. Container images and deployment examples below describe the upstream/local foundation, not an approved Jugalbandi hosted release.
+
+
 [**English**](SETUP.md) | [Español](SETUP.es.md) | [简体中文](SETUP.zh-CN.md) | [日本語](SETUP.ja.md)
 
 Welcome! This guide will walk you through setting up Resume Matcher on your local machine. Whether you're a developer looking to contribute or someone who wants to run the application locally, this guide has you covered.
@@ -61,8 +64,8 @@ If you're familiar with development tools and want to get running quickly:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # 2. Start the backend (Terminal 1)
 cd apps/backend
@@ -72,7 +75,7 @@ uv run app
 
 # 3. Start the frontend (Terminal 2)
 cd apps/frontend
-npm install                  # Install Node.js dependencies
+npm ci                  # Install Node.js dependencies
 npm run dev                  # Start the dev server
 ```
 
@@ -89,8 +92,8 @@ Open your browser to **<http://localhost:3000>** and you're ready to go!
 First, get the code on your machine:
 
 ```bash
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 ```
 
 ### 2. Backend Setup
@@ -177,7 +180,7 @@ cp .env.sample .env.local
 #### Install Node.js dependencies
 
 ```bash
-npm install
+npm ci
 ```
 
 #### Start the development server
@@ -432,7 +435,9 @@ npm run dev -- -p 3001
 
 ### Database Management
 
-Resume Matcher uses TinyDB (JSON file storage). All data is in `apps/backend/data/`:
+> **Jugalbandi data note:** The active store is `resume_matcher.db` plus related SQLite files, local uploads, settings and `.secret_key` under the configured `DATA_DIR` (default `apps/backend/data/`). TinyDB JSON is legacy import input. The reset example below permanently removes records and encryption material; it is historical reference, not a routine setup step or authorization to execute it. Obtain explicit approval and a verified recovery copy first. Stop the application before a filesystem backup; do not assume copying an active SQLite file alone is a consistent backup.
+
+Resume Matcher uses SQLite (SQLAlchemy 2 + aiosqlite). All data is in `apps/backend/data/`:
 
 ```bash
 # View database files
@@ -544,7 +549,7 @@ Resume-Matcher/
 │   │   ├── app/
 │   │   │   ├── main.py          # Application entry point
 │   │   │   ├── config.py        # Environment configuration
-│   │   │   ├── database.py      # TinyDB wrapper
+│   │   │   ├── database.py      # SQLAlchemy / SQLite facade
 │   │   │   ├── llm.py           # AI provider integration
 │   │   │   ├── routers/         # API endpoints
 │   │   │   ├── services/        # Business logic
@@ -588,3 +593,9 @@ Stuck? Here are your options:
 ---
 
 Happy resume building! If you find Resume Matcher helpful, consider [starring the repo](https://github.com/srbhr/Resume-Matcher) and [joining our Discord](https://dsc.gg/resume-matcher).
+
+## Jugalbandi developer checkpoint
+
+Use `uv sync --extra dev` from apps/backend for tests and `npm ci` from apps/frontend. Read [current quickstart checks](docs/agent/quickstart.md#jugalbandi-verification-and-known-setup-limits). The backend requires Python 3.13+; the container uses Python 3.13 and Node 22. The inspected local environment used Python 3.13.14 and Node 24.17.0; this is evidence, not a framework upgrade.
+
+Do not overwrite existing .env/.env.local files when following sample-copy instructions. Deletion/reset examples require explicit approval and a recovery copy. Branding does not rename data directories, packages, container images or environment variables.

@@ -1,3 +1,5 @@
+> **Jugalbandi — actualización 2026-10-01:** El proyecto amplía Resume Matcher y conserva sus créditos. Consulte el [manual de entrega](plan/delivery/README.md) y las [pruebas registradas](plan/delivery/EVIDENCE.md) (en inglés). GoldLens es el nombre histórico del plan. Las cuentas privadas, PostgreSQL y el analizador siguen planificados. Las imágenes y ejemplos de despliegue originales no representan un servicio Jugalbandi publicado.
+
 <div align="center">
 
 [![Resume Matcher](assets/header.png)](https://www.resumematcher.fyi)
@@ -201,8 +203,8 @@ La forma más rápida (MacOS, WSL y Ubuntu):
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # Backend (Terminal 1)
 cd apps/backend
@@ -212,7 +214,7 @@ uv run app
 
 # Frontend (Terminal 2)
 cd apps/frontend
-npm install
+npm ci
 npm run dev
 ```
 
@@ -246,8 +248,8 @@ docker run srbhr/resume-matcher:latest
 | Componente | Tecnología |
 |-----------|------------|
 | Backend | FastAPI, Python 3.13+, LiteLLM |
-| Frontend | Next.js 15, React 19, TypeScript |
-| Base de datos | TinyDB (almacenamiento en archivo JSON) |
+| Frontend | Next.js 16, React 19, TypeScript |
+| Base de datos | SQLite (SQLAlchemy 2 + aiosqlite) |
 | Estilos | Tailwind CSS 4, Swiss International Style |
 | PDF | Chromium headless vía Playwright |
 

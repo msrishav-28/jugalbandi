@@ -68,3 +68,7 @@ Portability correction: Git normalizes line endings across Windows/Linux. Stable
 ## EV-PUSH-001 — Initial implementation checkpoint
 
 Outcome: PASS. 2026-10-01. Commit 23dc696 (Introduce Jugalbandi branding and resumable delivery handbook) pushed with git push -u origin goldlens/baseline-and-first-checks to https://github.com/msrishav-28/jugalbandi.git. Git confirmed new remote branch and tracking setup; working tree clean afterward. Main, tags, existing history and attribution untouched. Brand task remains IN_REVIEW because runtime/build gaps persist.
+
+## EV-DOC-003 — Surgical existing-guide refresh
+
+Outcome: PASS. 2026-10-01, Node v24.17.0 / Windows; baseline dff1585 plus this documentation commit. Re-read frontend/backend manifests, Docker/Compose, API entrypoints, provider config, current localized state/branding, affected old guides and twin translations. Added current-stack table and handbook pointers; corrected Next 15/TinyDB claims and setup repository/lockfile commands. Existing architecture/history, license, credit and four source plans preserved. Validation: documentation validator; eleven validator cases including LF/CRLF; new local Markdown target/anchor checks; git diff --check; git diff path review restricted to Markdown and fingerprint JSON. No application checks rerun for documentation-only edits. Earlier runtime outcomes remain dated EV-BRAND-001, not fresh passes. Author self-review only.

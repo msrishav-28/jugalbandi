@@ -1,3 +1,5 @@
+> **Jugalbandi 更新（2026-10-01）：** 本项目基于 Resume Matcher，保留原作者署名。请参阅[交付手册](plan/delivery/README.md)和[验证记录](plan/delivery/EVIDENCE.md)（英文）。GoldLens 是规划阶段的旧名称。独立私有账户、PostgreSQL 和文档分析器仍属于计划功能。下文原项目的镜像和部署示例不代表已发布的 Jugalbandi 服务。
+
 # Resume Matcher 安装与配置指南
 
 [English](SETUP.md) | [Español](SETUP.es.md) | [**简体中文**](SETUP.zh-CN.md) | [日本語](SETUP.ja.md)
@@ -63,8 +65,8 @@ pip install uv
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # 2. 启动后端（终端 1）
 cd apps/backend
@@ -74,7 +76,7 @@ uv run app
 
 # 3. 启动前端（终端 2）
 cd apps/frontend
-npm install                  # 安装 Node.js 依赖
+npm ci                  # 安装 Node.js 依赖
 npm run dev                  # 启动开发服务器
 ```
 
@@ -93,8 +95,8 @@ npm run dev                  # 启动开发服务器
 先把代码拉到本机：
 
 ```bash
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 ```
 
 <a id="2-backend-setup"></a>
@@ -183,7 +185,7 @@ cp .env.sample .env.local
 #### 安装 Node.js 依赖
 
 ```bash
-npm install
+npm ci
 ```
 
 #### 启动开发服务器
@@ -371,7 +373,9 @@ npm run dev -- -p 3001
 
 ### 数据库管理
 
-Resume Matcher 使用 TinyDB（JSON 文件存储）。数据位于 `apps/backend/data/`：
+> **Jugalbandi 数据说明：** 当前使用 `resume_matcher.db`，以及相关 SQLite 文件、上传文件、配置和 `.secret_key`，存放在 `DATA_DIR`（默认 `apps/backend/data/`）。TinyDB 仅用于旧数据导入。下方重置示例会永久删除记录和加密密钥，不是常规安装步骤，也不构成执行授权。操作前必须获得明确批准并验证恢复副本。复制备份前应停止应用；仅复制运行中的 SQLite 主文件不能保证备份一致性。
+
+Resume Matcher 使用 SQLite（SQLAlchemy 2 + aiosqlite）。数据位于 `apps/backend/data/`：
 
 ```bash
 # 查看数据库文件
@@ -459,7 +463,7 @@ Resume-Matcher/
 │  │  ├─ app/
 │  │  │  ├─ main.py            # Application entry point
 │  │  │  ├─ config.py          # Environment configuration
-│  │  │  ├─ database.py        # TinyDB wrapper
+│  │  │  ├─ database.py        # SQLAlchemy / SQLite facade
 │  │  │  ├─ llm.py             # AI provider integration
 │  │  │  ├─ routers/           # API endpoints
 │  │  │  ├─ services/          # Business logic

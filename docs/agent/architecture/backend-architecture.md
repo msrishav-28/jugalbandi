@@ -1,5 +1,8 @@
 # Backend Architecture
 
+> **Jugalbandi additions (2026-10-01):** API display title/root name is Jugalbandi API; routes remain under `/api/v1` (prefix omitted in some tables below). Router inventory also includes the resume wizard. Processing uses in-process asynchronous work and SQLite coordination, not a durable worker service. Installation-wide records/settings do not provide private-account isolation. PostgreSQL, ownership, durable jobs and geometry analysis belong to the [target specification](../../../plan/delivery/ARCHITECTURE.md), not deployed components. See [current stack](../../../README.md#current-jugalbandi-stack-2026-10-01).
+
+
 > FastAPI + Python 3.13+ | SQLite (SQLAlchemy 2.0 async + aiosqlite) | LiteLLM multi-provider
 
 ## Directory Structure

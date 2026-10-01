@@ -1,5 +1,8 @@
 # Resume Matcher — Agent Documentation Index
 
+> **Jugalbandi entry point:** Read [root instructions](../../AGENTS.md), [delivery index](../../plan/delivery/README.md), [tracker](../../plan/delivery/TRACKER.md) and [handoff](../../plan/delivery/HANDOFF.md) before the existing specialist guides below. [Current stack](../../README.md#current-jugalbandi-stack-2026-10-01) describes implemented technology; delivery architecture describes future work. Historical names and upstream credit remain intentional.
+
+
 > Project-specific reference for agents working in the Resume Matcher codebase.
 
 Generic, reusable guides (Swiss design system, Next.js performance) live in [`../portable/`](../portable/README.md) as standalone packs that can be lifted out of this repo and dropped into any project. This index covers only the docs that are tied to Resume Matcher itself.

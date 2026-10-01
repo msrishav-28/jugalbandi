@@ -1,5 +1,8 @@
 # CLAUDE.md - Backend (`apps/backend`)
 
+> **Jugalbandi update:** Follow [root AGENTS.md](../../AGENTS.md) and the [delivery handbook](../../plan/delivery/README.md) before this existing deep-dive. Historical names and package/storage identifiers remain for compatibility. See [evidence](../../plan/delivery/EVIDENCE.md) for test limitations. Format only named changed files; older whole-project formatting advice below is superseded.
+
+
 > FastAPI backend for Resume Matcher. This file goes **deeper on the backend**.
 > For project-wide context see the root [`.claude/CLAUDE.md`](../../.claude/CLAUDE.md) and [`docs/agent/README.md`](../../docs/agent/README.md).
 

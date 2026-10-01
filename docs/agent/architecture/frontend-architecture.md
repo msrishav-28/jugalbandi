@@ -1,6 +1,9 @@
 # Frontend Architecture
 
-> Next.js 15 + React 19 | TypeScript | Tailwind | Swiss International Style
+> **Jugalbandi additions (2026-10-01):** Routes also include `/tracker` and `/resume-wizard`; directory examples below are abbreviated. Product labels reuse `APP_NAME` in `lib/config/version.ts`. Preserve legacy browser-storage keys when changing branding. Seven locale dictionaries include the new upload wording. Tiptap, dnd-kit and DOMPurify support editing, ordering and safe rich-text rendering. See [current stack](../../../README.md#current-jugalbandi-stack-2026-10-01) and [delivery status](../../../plan/delivery/TRACKER.md).
+
+
+> Next.js 16 + React 19 | strict TypeScript 5 | Tailwind CSS 4 | Swiss International Style
 
 ## Directory Structure
 
@@ -43,11 +46,11 @@ apps/frontend/
 
 ### Tailor (`/tailor`)
 - Job description textarea
-- Calls: `POST /jobs/upload` → `POST /resumes/improve`
+- Calls under `/api/v1`: `POST /jobs/upload` → `POST /resumes/improve/preview` → explicit confirmation → `POST /resumes/improve/confirm`
 - Redirects to `/resumes/[new_id]`
 
 ### Settings (`/settings`)
-- Provider selection (6 providers)
+- Provider selection from current API configuration; see backend `app/config.py` for supported adapters
 - API key input
 - System status (cached, 30-min refresh)
 
@@ -74,7 +77,7 @@ const { status, refreshStatus, incrementResumes, decrementResumes } = useStatusC
 ```typescript
 const { contentLanguage, setContentLanguage } = useLanguage();
 ```
-- Content generation language (en, es, zh, ja)
+- Separate UI/content language preferences; configured UI locales: en, es, zh, ja, pt, fr, ko. Translation does not prove multilingual analyzer quality.
 
 ## API Client (`lib/api/`)
 

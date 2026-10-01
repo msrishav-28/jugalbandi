@@ -1,3 +1,5 @@
+> **Jugalbandi 更新（2026-10-01）：** Resume Matcher を拡張するプロジェクトです。元の作者へのクレジットは維持します。[開発手順](plan/delivery/README.md)と[検証記録](plan/delivery/EVIDENCE.md)（英語）を参照してください。GoldLens は計画時の旧名称です。非公開アカウント、PostgreSQL、文書アナライザーはまだ計画段階です。従来のイメージやデプロイ例は公開済みの Jugalbandi サービスではありません。
+
 # Resume Matcher セットアップガイド
 
 [English](SETUP.md) | [Español](SETUP.es.md) | [简体中文](SETUP.zh-CN.md) | [**日本語**](SETUP.ja.md)
@@ -63,8 +65,8 @@ pip install uv
 
 ```bash
 # 1. リポジトリをクローン
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # 2. バックエンド起動（ターミナル 1）
 cd apps/backend
@@ -74,7 +76,7 @@ uv run app
 
 # 3. フロントエンド起動（ターミナル 2）
 cd apps/frontend
-npm install                  # Node.js 依存関係をインストール
+npm ci                  # Node.js 依存関係をインストール
 npm run dev                  # 開発サーバを起動
 ```
 
@@ -93,8 +95,8 @@ npm run dev                  # 開発サーバを起動
 まずはコードを取得します：
 
 ```bash
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 ```
 
 <a id="2-backend-setup"></a>
@@ -183,7 +185,7 @@ cp .env.sample .env.local
 #### Node.js 依存関係をインストール
 
 ```bash
-npm install
+npm ci
 ```
 
 #### 開発サーバを起動
@@ -371,7 +373,9 @@ npm run dev -- -p 3001
 
 ### データベース管理
 
-Resume Matcher は TinyDB（JSON ファイル保存）を使用します。データは `apps/backend/data/` にあります：
+> **Jugalbandi データについて：** 現在の保存先は `DATA_DIR`（既定値 `apps/backend/data/`）内の `resume_matcher.db`、関連 SQLite ファイル、アップロード、設定、`.secret_key` です。TinyDB は旧データの取り込み専用です。以下のリセット例は記録と暗号鍵を永久に削除します。通常のセットアップ手順でも実行許可でもありません。明示的な承認と検証済みの復旧用コピーが必要です。ファイルのバックアップ前にアプリを停止してください。稼働中の SQLite 本体だけのコピーでは整合性を保証できません。
+
+Resume Matcher は SQLite（SQLAlchemy 2 + aiosqlite）を使用します。データは `apps/backend/data/` にあります：
 
 ```bash
 # DB ファイルを見る
@@ -459,7 +463,7 @@ Resume-Matcher/
 │  │  ├─ app/
 │  │  │  ├─ main.py            # Application entry point
 │  │  │  ├─ config.py          # Environment configuration
-│  │  │  ├─ database.py        # TinyDB wrapper
+│  │  │  ├─ database.py        # SQLAlchemy / SQLite facade
 │  │  │  ├─ llm.py             # AI provider integration
 │  │  │  ├─ routers/           # API endpoints
 │  │  │  ├─ services/          # Business logic

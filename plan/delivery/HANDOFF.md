@@ -25,3 +25,7 @@ Local full-history bundle is outside checkout at ../../.recovery/jugalbandi-befo
 ## Published checkpoint
 
 Commit 23dc696 is pushed to origin/goldlens/baseline-and-first-checks. It contains the actual rename, regression tests and handbook. This branch is a review checkpoint, not a deployed release. Subsequent evidence-only checkpoint commits may follow it; inspect git log rather than treating this short ID as the newest head forever.
+
+## Existing documentation refresh — 2026-10-01
+
+Client requested surgical additions. Existing README/SETUP variants now identify Jugalbandi, correct primary storage to SQLite, and point to the handbook. Existing architecture, quickstart, workflow, testing and CLAUDE guides link to current facts and approval boundaries. README owns the current stack table. No product/configuration change or test rerun is implied by this documentation pass; previous runtime blockers remain.

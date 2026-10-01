@@ -1,5 +1,8 @@
 # Workflow: Commits, PRs, and Testing
 
+> **Jugalbandi delivery rules:** [Root instructions](../../AGENTS.md) and [approvals](../../plan/delivery/DECISIONS_AND_APPROVALS.md) govern this engagement. Record claims/evidence/handoffs in the delivery package. Ordinary feature-branch pushes are authorized; main/tag pushes, publishing workflow dispatch, history replacement and deployment require specific approval. The release procedure below is reference, not authorization. Format only intentionally changed files; preserve upstream attribution.
+
+
 > **Git workflow, testing guidelines, and PR conventions.**
 
 ## Commit Guidelines
@@ -40,14 +43,14 @@ npm run lint
 npm test
 
 # Format code
-npm run format
+npm exec -- prettier --check path/to/changed-file.tsx
 ```
 
 ### Backend Testing
 
 - Tests belong in `apps/backend/tests/`
 - Use `test_*.py` naming convention
-- Seed anonymized resume/job fixtures
+- Use synthetic or explicitly permissioned resume/job fixtures
 
 ```bash
 # Run tests

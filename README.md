@@ -211,8 +211,8 @@ Fastest for MacOS, WSL and Ubuntu users:
 
 ```bash
 # Clone the repository
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # Backend (Terminal 1)
 cd apps/backend
@@ -222,7 +222,7 @@ uv run app
 
 # Frontend (Terminal 2)
 cd apps/frontend
-npm install
+npm ci
 npm run dev
 ```
 
@@ -272,9 +272,35 @@ Endpoints:
 |-----------|------------|
 | Backend | FastAPI, Python 3.13+, LiteLLM |
 | Frontend | Next.js 16, React 19, TypeScript |
-| Database | TinyDB (JSON file storage) |
+| Database | SQLite (SQLAlchemy 2 + aiosqlite) |
 | Styling | Tailwind CSS 4, Swiss International Style |
 | PDF | Headless Chromium via Playwright |
+
+
+### Current Jugalbandi stack (2026-10-01)
+
+The rename and handbook currently live on `goldlens/baseline-and-first-checks`; a default-branch clone does not include unmerged work. Follow the [handoff](plan/delivery/HANDOFF.md) for the active checkout.
+
+This is the implemented foundation, verified against the [frontend manifest](apps/frontend/package.json), [npm lock](apps/frontend/package-lock.json), [backend manifest](apps/backend/pyproject.toml) and source. Version ranges below are declarations, not claims about every installation.
+
+| Layer | Current technology and responsibility |
+|---|---|
+| Website | Next.js 16 (declared ^16.3.3), React 19 (^19.2.4), strict TypeScript 5, App Router, Turbopack; Node.js runtime |
+| UI and editing | Tailwind CSS 4, existing Swiss design system, custom UI components, Tiptap 3 rich text, dnd-kit drag/drop, Lucide icons; clsx/tailwind-merge utilities |
+| Languages and browser state | JSON dictionaries for English, Spanish, Chinese, Japanese, Portuguese, French and Korean; React context/hooks and localStorage recovery drafts; no separate translation service |
+| API server | Python >=3.13, FastAPI 0.128.4, Uvicorn 0.40.0; REST under /api/v1; Next.js forwards API traffic to Python |
+| Validation/configuration | Pydantic 2.12.5, pydantic-settings 2.14.2, python-dotenv, python-multipart; DOMPurify allowlist for rendered rich text |
+| Records/files | SQLite via SQLAlchemy 2.0.36 and aiosqlite 0.20.0, local data/uploads and JSON settings. TinyDB 4.8.2 remains for legacy import, not primary storage |
+| AI integration | LiteLLM 1.86.2, existing prompt/structured-output and operation-budget code; configured adapters include OpenAI, OpenAI-compatible, Azure Foundry, Anthropic, OpenRouter, Gemini, DeepSeek, Groq and Ollama; availability depends on provider configuration |
+| Document input/output | MarkItDown 0.1.4, pdfminer.six 20260107, python-docx 1.2.0; Playwright 1.58.0/Chromium renders internal print pages to PDF; Google Fonts in frontend and Noto CJK fonts in container |
+| Credential storage | cryptography 50.0.0 / Fernet for stored provider keys. This does not supply user authentication or private-account isolation |
+| Background work | Existing in-process asynchronous processing and database coordination; no deployed durable queue or independently operated worker service |
+| Tests/quality | pytest, pytest-asyncio, HTTPX, respx; Vitest 4, React Testing Library, jsdom; ESLint 9, Prettier 3, TypeScript checks, Python locale-parity script, browser/evaluation harnesses |
+| Packaging/delivery | npm with committed lockfile; uv and Python pyproject/Hatchling; Docker multi-stage build (Node 22 + Python 3.13), Docker Compose, shell startup script; GitHub Actions image publishing and optional local Git hooks |
+
+**Planned separately:** PostgreSQL, private storage, invited account isolation, durable jobs/workers, geometry-based analysis, conditional OCR and governed peer comparisons. No hosted provider or queue framework is adopted merely by appearing in a plan. Jev and Laya are optional evaluation candidates, not installed application dependencies. See the [target architecture](plan/delivery/ARCHITECTURE.md).
+
+**Validation limits:** see [dated evidence](plan/delivery/EVIDENCE.md), rather than treating a documented command as a passing check. The local frontend runtime used Node 24.17.0; the container uses Node 22. Backend dependencies currently lack a committed uv lock. No hosted beta is deployed.
 
 ## Join Us and Contribute
 

@@ -1,3 +1,5 @@
+> **Jugalbandi 更新（2026-10-01）：** 本项目基于 Resume Matcher，保留原作者署名。请参阅[交付手册](plan/delivery/README.md)和[验证记录](plan/delivery/EVIDENCE.md)（英文）。GoldLens 是规划阶段的旧名称。独立私有账户、PostgreSQL 和文档分析器仍属于计划功能。下文原项目的镜像和部署示例不代表已发布的 Jugalbandi 服务。
+
 <div align="center">
 
 [![Resume Matcher](assets/header.png)](https://www.resumematcher.fyi)
@@ -199,8 +201,8 @@ Resume Matcher 是免费且开源的，依靠赞助商与支持者维持运转�
 
 ```bash
 # 克隆仓库
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # 后端（终端 1）
 cd apps/backend
@@ -210,7 +212,7 @@ uv run app
 
 # 前端（终端 2）
 cd apps/frontend
-npm install
+npm ci
 npm run dev
 ```
 
@@ -244,8 +246,8 @@ docker run srbhr/resume-matcher:latest
 | 组件 | 技术 |
 |------|------|
 | 后端 | FastAPI、Python 3.13+、LiteLLM |
-| 前端 | Next.js 15、React 19、TypeScript |
-| 数据库 | TinyDB（JSON 文件存储） |
+| 前端 | Next.js 16、React 19、TypeScript |
+| 数据库 | SQLite（SQLAlchemy 2 + aiosqlite） |
 | 样式 | Tailwind CSS 4、Swiss International Style |
 | PDF | Playwright 驱动的无头 Chromium |
 

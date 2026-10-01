@@ -28,7 +28,7 @@ GL-QA-001 may proceed alongside baseline work. GL-STORAGE-001 and GL-JOBS-001 ca
 - **Requirements:** GL-R-063, GL-R-064; source sections follow those requirement rows.
 - **Depends on:** None.
 - **Approval references:** A-DOC-001.
-- **Edit boundary and reuse:** Root instructions, plan/delivery and root ignore exception only.
+- **Edit boundary and reuse:** Root instructions, plan/delivery and root ignore exception; later A-DOC-002 also permits targeted existing-guide additions/corrections, preserving original source plans and product behavior.
 - **Behavior / interfaces:** Reconcile four plans, map source requirements, specify contracts/tasks/gates and initialize honest status. Preserve every original source plan and application file.
 - **Acceptance:** All required docs exist; source coverage, links, IDs and dependency graph validate; restart exercises produce safe next actions; baseline hashes unchanged except approved ignore addition.
 - **Verification / client proof:** Run documentation validator and pre/post file comparison; review inconsistent completion and approval claims.

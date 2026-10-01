@@ -1,3 +1,5 @@
+> **Jugalbandi — actualización 2026-10-01:** El proyecto amplía Resume Matcher y conserva sus créditos. Consulte el [manual de entrega](plan/delivery/README.md) y las [pruebas registradas](plan/delivery/EVIDENCE.md) (en inglés). GoldLens es el nombre histórico del plan. Las cuentas privadas, PostgreSQL y el analizador siguen planificados. Las imágenes y ejemplos de despliegue originales no representan un servicio Jugalbandi publicado.
+
 # Guía de configuración de Resume Matcher
 
 [English](SETUP.md) | [**Español**](SETUP.es.md) | [简体中文](SETUP.zh-CN.md) | [日本語](SETUP.ja.md)
@@ -63,8 +65,8 @@ Si ya estás familiarizado con herramientas de desarrollo y quieres arrancar rá
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # 2. Inicia el backend (Terminal 1)
 cd apps/backend
@@ -74,7 +76,7 @@ uv run app
 
 # 3. Inicia el frontend (Terminal 2)
 cd apps/frontend
-npm install                  # Instala dependencias de Node.js
+npm ci                  # Instala dependencias de Node.js
 npm run dev                  # Arranca el servidor de desarrollo
 ```
 
@@ -93,8 +95,8 @@ Abre **<http://localhost:3000>** en el navegador y listo.
 Primero, trae el código a tu máquina:
 
 ```bash
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 ```
 
 <a id="2-backend-setup"></a>
@@ -183,7 +185,7 @@ cp .env.sample .env.local
 #### Instalar dependencias de Node.js
 
 ```bash
-npm install
+npm ci
 ```
 
 #### Iniciar el servidor de desarrollo
@@ -371,7 +373,9 @@ npm run dev -- -p 3001
 
 ### Gestión de base de datos
 
-Resume Matcher usa TinyDB (almacenamiento en archivos JSON). Todos los datos están en `apps/backend/data/`:
+> **Datos de Jugalbandi:** El almacén activo es `resume_matcher.db`, junto con los archivos SQLite relacionados, las cargas, la configuración y `.secret_key`, dentro de `DATA_DIR` (por defecto `apps/backend/data/`). TinyDB solo sirve para importar datos antiguos. El ejemplo de reinicio elimina registros y material de cifrado: no es un paso normal de instalación ni una autorización. Requiere aprobación explícita y una copia de recuperación verificada. Detenga la aplicación antes de copiar sus archivos; copiar únicamente una base SQLite activa no garantiza una copia coherente.
+
+Resume Matcher usa SQLite (SQLAlchemy 2 + aiosqlite). Todos los datos están en `apps/backend/data/`:
 
 ```bash
 # Ver archivos de la base de datos
@@ -459,7 +463,7 @@ Resume-Matcher/
 │  │  ├─ app/
 │  │  │  ├─ main.py            # Application entry point
 │  │  │  ├─ config.py          # Environment configuration
-│  │  │  ├─ database.py        # TinyDB wrapper
+│  │  │  ├─ database.py        # SQLAlchemy / SQLite facade
 │  │  │  ├─ llm.py             # AI provider integration
 │  │  │  ├─ routers/           # API endpoints
 │  │  │  ├─ services/          # Business logic

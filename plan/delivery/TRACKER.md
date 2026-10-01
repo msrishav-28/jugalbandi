@@ -18,7 +18,7 @@ Initial “—” means not performed/not assigned, never success. Source files 
 
 | Task | Phase | Priority | Requirements | Dependencies | Gate categories | Owner | Reviewer | State | Evidence | Verified date | Revision/fingerprint | Next action or blocker |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-002 | 2026-10-01 | DOCSET-2026-10-01-v2 | Handbook updated for repository execution and Jugalbandi name; product remains unverified |
+| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-003 | 2026-10-01 | DOCSET-2026-10-01-v3 | Handbook updated for repository execution and Jugalbandi name; product remains unverified |
 | [GL-BASE-001](WORK_PACKAGES.md#gl-base-001) | M0 | P0 | GL-R-002 | GL-DOCS-001 | G-BASE | Unassigned | Unassigned | BLOCKED | — | — | — | Revalidate handbook; remote provenance inspected and separate clone acquired |
 | [GL-BASE-002](WORK_PACKAGES.md#gl-base-002) | M0 | P0 | GL-R-003 | GL-DOCS-001 | — | Unassigned | Unassigned | BLOCKED | EV-BRAND-001 | — | — | Python/dependencies installed; native-library policy and production font fetch block full baseline |
 | [GL-BASE-003](WORK_PACKAGES.md#gl-base-003) | M0 | P0 | GL-R-068 | GL-BASE-001, GL-BASE-002 | — | Unassigned | Unassigned | NOT_STARTED | — | — | — | Verify dependencies and scope before claim |
@@ -79,3 +79,7 @@ Keep IDs stable. Claim records carry exact approvals; table categories remain st
 ### 2026-10-01 — GL-BRAND-001
 
 Owner: Codex. Reviewer: author self-review (bounded brand copy only). Approval: A-BRAND-001. Allowed paths: frontend brand configuration, metadata, home/builder/settings brand labels, seven message dictionaries, brand tests; backend API display name and regression test; README product introduction; delivery records. No account, storage, public route, package identity, license or publishing changes. Prerequisite: repository baseline matches 539 original files except the approved ignore exception (text line endings normalized). This isolated rename does not depend on hosted identity/data work. Checkpoint: implement and run tests, lint, typecheck, build, locale parity and browser checks; record gaps honestly.
+
+### 2026-10-01 — GL-DOCS-001
+
+Owner: Codex. Reviewer: author self-review, documentation only. Approval: A-DOC-001, A-DOC-002. Allowed paths: existing root README/SETUP variants, existing agent index/quickstart/workflow/testing/architecture guides, existing CLAUDE guides, and delivery records. Preserve original four plans, attribution, application code and configuration. Client asks for surgical additions and corrections. Verify against manifests/callers, review every diff, check added local links and handbook consistency, then commit/push the existing non-publishing branch.

@@ -1,3 +1,5 @@
+> **Jugalbandi 更新（2026-10-01）：** Resume Matcher を拡張するプロジェクトです。元の作者へのクレジットは維持します。[開発手順](plan/delivery/README.md)と[検証記録](plan/delivery/EVIDENCE.md)（英語）を参照してください。GoldLens は計画時の旧名称です。非公開アカウント、PostgreSQL、文書アナライザーはまだ計画段階です。従来のイメージやデプロイ例は公開済みの Jugalbandi サービスではありません。
+
 <div align="center">
 
 [![Resume Matcher](assets/header.png)](https://www.resumematcher.fyi)
@@ -199,8 +201,8 @@ MacOS / WSL / Ubuntu で最も手早い手順：
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/srbhr/Resume-Matcher.git
-cd Resume-Matcher
+git clone https://github.com/msrishav-28/jugalbandi.git
+cd jugalbandi
 
 # バックエンド（ターミナル 1）
 cd apps/backend
@@ -210,7 +212,7 @@ uv run app
 
 # フロントエンド（ターミナル 2）
 cd apps/frontend
-npm install
+npm ci
 npm run dev
 ```
 
@@ -244,8 +246,8 @@ docker run srbhr/resume-matcher:latest
 | コンポーネント | 技術 |
 |----------------|------|
 | バックエンド | FastAPI、Python 3.13+、LiteLLM |
-| フロントエンド | Next.js 15、React 19、TypeScript |
-| データベース | TinyDB（JSON ファイル保存） |
+| フロントエンド | Next.js 16、React 19、TypeScript |
+| データベース | SQLite（SQLAlchemy 2 + aiosqlite） |
 | スタイリング | Tailwind CSS 4、Swiss International Style |
 | PDF | Playwright による Headless Chromium |
 

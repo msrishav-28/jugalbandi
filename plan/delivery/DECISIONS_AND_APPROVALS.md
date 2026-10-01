@@ -101,3 +101,9 @@ Client: “start with actual code”, “keep pushing to repo at appropriate mom
 | A-BRAND-001 | APPROVED | Rename current product display text to Jugalbandi, with regression checks and delivery-record update | Client explicit rename, 2026-10-01 | Preserve saved keys, public API routes, upstream credits, license, original plans and deployment identifiers; recover by reverting the bounded commit | G-UX |
 
 History replacement is requested but not informed-approved. The inspected main history contains 1,654 commits at 9c05e423dfde44a5b4bb398d2dc7507194252ded. No remote history or contributor record was changed. Before any replacement: verified recovery bundle, precise affected references, publishing consequences, required attribution and a separate informed YES.
+
+## Existing-guide maintenance — 2026-10-01
+
+| ID | Status | Authorized action | Evidence | Explicit boundary | Gate coverage |
+|---|---|---|---|---|---|
+| A-DOC-002 | APPROVED | Add current Jugalbandi context and surgically correct outdated stack/setup statements in existing project guides | Client: “update the old docs ... surgically as addition modifying only what is needed” | Documentation only; preserve historical plans, credits, application code, settings and deployment behavior | A-DOC-001 |

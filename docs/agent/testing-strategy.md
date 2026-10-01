@@ -1,5 +1,8 @@
 # Testing Strategy & Verification Plan
 
+> **Jugalbandi evidence boundary (2026-10-01):** Counts, coverage and phase outcomes below are historical snapshots. Current results/limitations are in [evidence](../../plan/delivery/EVIDENCE.md); live status is in [tracker](../../plan/delivery/TRACKER.md). Branding regressions are `apps/frontend/tests/product-brand.test.tsx` and `apps/backend/tests/integration/test_product_identity.py`; the backend check remains environment-blocked. Use [quickstart](quickstart.md) for current commands.
+
+
 > **Status:** Historical rollout record. Started 2026-05-30 on branch `test/backend-coverage-foundation` (base: `dev`). Assessment counts and completed phases below describe their recorded checkpoints, not the current suite.
 > **Scope:** Backend (`apps/backend`, Phases 1–6) **and** frontend (`apps/frontend`, vitest — §8). Gating is a local `pre-push` hook, not PR CI.
 > **Why this exists:** We shipped a build break that no automation caught, users report "Ollama doesn't work" and "resume won't render," and we had no evidence-based read on whether our tests are real or theater. This doc is the resumable record of the assessment and the plan.
