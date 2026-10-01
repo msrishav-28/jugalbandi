@@ -21,3 +21,7 @@ Inspect Git status and latest branch commit; run node plan/delivery/validate-doc
 ## Recovery and pushes
 
 Local full-history bundle is outside checkout at ../../.recovery/jugalbandi-before-implementation-9c05e42.bundle; verification and hash in EV-BASE-002. Do not overwrite it. Revert bounded commits to undo this work. Feature-branch pushes are authorized; main/tag pushes may publish images and remain gated. History replacement still needs exact consequences, tested recovery, and informed YES. Check remote equality after each push; failed authentication is not a successful push.
+
+## Published checkpoint
+
+Commit 23dc696 is pushed to origin/goldlens/baseline-and-first-checks. It contains the actual rename, regression tests and handbook. This branch is a review checkpoint, not a deployed release. Subsequent evidence-only checkpoint commits may follow it; inspect git log rather than treating this short ID as the newest head forever.

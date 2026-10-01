@@ -64,3 +64,7 @@ Outcome: PASS. 2026-10-01, Node v24.17.0 / Windows. Static review of naming/exec
 Revalidation detail: the negative test for missing evidence initially failed because its mutation hard-coded the old EV-DOC-001 identifier and made no change after the evidence revision. Updated fault injection to replace evidence IDs generically; acceptance assertions remain unchanged. Re-ran all nine cases after the fix.
 
 Portability correction: Git normalizes line endings across Windows/Linux. Stable document and original-plan content checks now use LF-normalized fingerprints, while original raw preservation hashes remain untouched. Added both LF and CRLF in-memory checkout cases. Product-code staged whitespace check passes; full staged check reports existing Markdown hard-break whitespace in preserved source plans and the historical CSV trailing blank line, intentionally unchanged.
+
+## EV-PUSH-001 — Initial implementation checkpoint
+
+Outcome: PASS. 2026-10-01. Commit 23dc696 (Introduce Jugalbandi branding and resumable delivery handbook) pushed with git push -u origin goldlens/baseline-and-first-checks to https://github.com/msrishav-28/jugalbandi.git. Git confirmed new remote branch and tracking setup; working tree clean afterward. Main, tags, existing history and attribution untouched. Brand task remains IN_REVIEW because runtime/build gaps persist.
