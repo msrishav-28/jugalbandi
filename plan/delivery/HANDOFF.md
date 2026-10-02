@@ -2,6 +2,8 @@
 
 ## Latest checkpoint — 2026-10-02
 
+GL-LOCAL-001 is implemented and IN_REVIEW: existing resume viewer now has a collapsible, read-only repeated-bullet review with all seven locales. 694 frontend tests, lint/typecheck/locales and synthetic desktop/mobile browser checks pass (EV-LOCAL-002). Original-file geometry and saved review feedback remain future work. User explicitly requested continuing code while postponing environment repair; do not block independent local slices solely on the Windows dependency. Do not claim unavailable backend/build checks pass.
+
 Documentation alignment is complete (EV-DOC-004). The first code checkpoint repairs Windows test setup; 54 targeted backend tests pass (EV-LOCAL-001). Full application imports remain blocked by Windows Application Control; do not bypass it. Local installation is the default; no hosting is being set up. Earlier hosted-beta task dependencies require applicability review before product implementation. Prior dated sections below are history, not permission to deploy. Read the live tracker, [audit register](MARKDOWN_AUDIT.md) and latest decisions first.
 
 Dated 2026-10-01 (Asia/Calcutta). Live status belongs to [TRACKER](TRACKER.md). Owner: Codex; bounded rename author self-review only.

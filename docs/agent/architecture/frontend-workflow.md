@@ -120,3 +120,9 @@ if (response.processed_resume) {
 The tailor page records a confirmed server response before navigation and optimistic counters. Retrying navigation reuses that acknowledgement. Confirmation failure retries the same stored job and preview; the Generate action intentionally uploads a new job before making a new preview. Closing/rejecting the preview or leaving the route prevents late results from updating the current UI.
 
 See the [reliability map](reliability-map.md) for file ownership, deterministic checks and the actual browser script. The browser fixture covers Next navigation and per-tab draft separation with synthetic API responses; backend transaction tests cover persistence separately.
+
+## Local repeated-bullet review (Jugalbandi)
+
+The existing resume viewer includes a collapsible Local review panel above the preview. It reviews stored work-experience/project descriptions, including hidden sections, in the browser. Matching is case-sensitive after whitespace normalization; original text and numbered entry/bullet locations remain evidence. It calls no API or AI provider and changes nothing. Review in editor uses the existing edit flow; the panel is excluded from print. It is not original-PDF extraction, a score or an ATS certification.
+
+Input is validated and bounded: 250 entries per section, 1,000 description entries overall, 5,000 UTF-16 code units per entry and 200,000 overall. Invalid/oversized input produces unavailable rather than a partial clean result. The first 20 repeated groups are shown with 240-code-unit excerpts and all source locations; the UI discloses truncation of the group list. Empty and no-repeat states are distinct. The rule is in `lib/utils/repeated-bullets.ts`, presentation in `components/resume/local-bullet-review.tsx`; component, rule and viewer tests cover behavior. Existing fetch/error/loading states remain unchanged.

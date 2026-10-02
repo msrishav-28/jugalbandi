@@ -1139,5 +1139,19 @@
       "skillGaps": "技能差距",
       "talkingPoints": "沟通要点"
     }
+  },
+  "localReview": {
+    "title": "本地检查 · 重复条目",
+    "scope": "在此浏览器中检查已保存的工作经历和项目条目，包括隐藏章节。不调用 AI。忽略空白，区分大小写。不评估原始 PDF 或 ATS 兼容性。",
+    "invalid": "无法检查：已保存条目的格式不受支持。",
+    "limit": "无法检查：简历超出本地检查限制。",
+    "empty": "没有可检查的工作经历或项目条目。",
+    "clear": "已检查 {count} 个条目；未发现重复的非空文本。",
+    "found": "重复段落：{count}。",
+    "advice": "重复可能是有意的。编辑前请查看每个位置；不会自动修改。",
+    "workExperience": "工作经历 {entry}，条目 {bullet}",
+    "personalProjects": "项目 {entry}，条目 {bullet}",
+    "more": "仅显示前 20 个重复段落。请在编辑器中检查其余内容。",
+    "edit": "在编辑器中检查"
   }
 }

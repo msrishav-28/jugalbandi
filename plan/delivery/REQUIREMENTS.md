@@ -35,13 +35,13 @@ Dispositions: **Retained** = target requirement; **Adapted** = explicit change t
 | GL-R-023 | Inspect font distributions, style hierarchy, contrast estimates, capitalization and visual noise; do not enforce one universal style | P10.3,16; T9 | Retained / M4 | GL-ANALYSIS-002 |
 | GL-R-024 | DOCX preserves paragraphs/runs/styles/tables/headers/footers/numbering and page metadata; sandboxed conversion labels rendering estimates | U11; T8; P10.1 | Retained / M4 | GL-DOC-003 |
 | GL-R-025 | Conditional OCR handles scan-only/mixed pages, retains token confidence and bounds, and suppresses unsupported precise typography claims | U11; T8; P10.1 | Retained / M4 | GL-DOC-004 |
-| GL-R-026 | Plain text receives content-only analysis with visual dimensions unavailable; legacy DOC behavior is inventoried before changing support | P10.1; U5.1 | Adapted / M5 | GL-SEMANTIC-001 |
+| GL-R-026 | Plain text receives content-only analysis with visual dimensions unavailable; legacy DOC behavior is inventoried before changing support | P10.1; U5.1 | Adapted / M5 | GL-SEMANTIC-001, GL-LOCAL-001 |
 | GL-R-027 | Extract all defined resume sections and entities with source-span references; unknown/custom sections survive | U13; T10; P14 | Retained / M5 | GL-SEMANTIC-001 |
 | GL-R-028 | Bullet feedback distinguishes action, ownership, method, scope, outcome, contextual numbers, repetition, tense and verbosity; no invented achievements | P10.5; U13 | Retained / M5 | GL-SEMANTIC-002 |
 | GL-R-029 | Narrative feedback considers role/level, top-of-page proof, summary usefulness and ordering; labels inference and recruiter-scan simulation | P10.4,12; U5.4,7 | Retained / M5-M6 | GL-SEMANTIC-002, GL-REPORT-002 |
 | GL-R-030 | Pasted jobs support lexical, semantic and evidence match; gaps distinguish demonstrated, buried, weakly evidenced and not demonstrated | P10.6; U13; T10 | Retained / M5 | GL-MATCH-001 |
 | GL-R-031 | Six dimensions expose evidence, confidence, context and availability; missing job/cohort is unscored; no employability prediction | P6,13; U4,8 | Adapted / M5 | GL-SCORE-001 |
-| GL-R-032 | Findings have category, severity, confidence, consequence, source evidence, action and version; clean documents need no invented issue quota | O6; P20; U18 | Adapted / M3-M5 | GL-REPORT-001, GL-SCORE-001 |
+| GL-R-032 | Findings have category, severity, confidence, consequence, source evidence, action and version; clean documents need no invented issue quota | O6; P20; U18 | Adapted / M3-M5 | GL-REPORT-001, GL-SCORE-001, GL-LOCAL-001 |
 | GL-R-033 | Overview prioritizes three useful actions, shows privacy/context and provides all specified report lenses without dead navigation | P9,12; U7 | Retained / M6 | GL-REPORT-002 |
 | GL-R-034 | Canvas has page thumbnails, zoom, filters, inspector and margin/alignment/whitespace/density/order/hierarchy/ATS overlays; default at most five pins | P12; U7 | Retained / M6 | GL-REPORT-002 |
 | GL-R-035 | Accept/dismiss/intentional feedback is revision-scoped; raw measurement remains intact and suppressed issues can be reviewed | P8,12; T9.6 | Adapted / M3-M6 | GL-REPORT-001, GL-REPORT-002 |

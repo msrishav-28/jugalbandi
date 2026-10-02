@@ -1139,5 +1139,19 @@
       "skillGaps": "Écarts de compétences",
       "talkingPoints": "Arguments clés"
     }
+  },
+  "localReview": {
+    "title": "Analyse locale · Puces répétées",
+    "scope": "Vérifie dans ce navigateur les puces enregistrées des expériences et projets, y compris les sections masquées. Sans IA. Ignore les espaces, respecte la casse. Ne vérifie ni le PDF original ni la compatibilité ATS.",
+    "invalid": "Analyse indisponible : format des puces non pris en charge.",
+    "limit": "Analyse indisponible : ce CV dépasse les limites locales.",
+    "empty": "Aucune puce d’expérience ou de projet à vérifier.",
+    "clear": "{count} entrées vérifiées ; aucun texte non vide répété.",
+    "found": "Passages répétés : {count}.",
+    "advice": "La répétition peut être volontaire. Vérifiez chaque emplacement avant de modifier ; aucune modification automatique.",
+    "workExperience": "Expérience {entry}, puce {bullet}",
+    "personalProjects": "Projet {entry}, puce {bullet}",
+    "more": "Les 20 premiers passages répétés sont affichés. Vérifiez la suite dans l’éditeur.",
+    "edit": "Vérifier dans l’éditeur"
   }
 }

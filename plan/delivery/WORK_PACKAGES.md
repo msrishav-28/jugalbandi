@@ -743,3 +743,19 @@ GL-QA-001 may proceed alongside baseline work. GL-STORAGE-001 and GL-JOBS-001 ca
 - **Recovery:** Revert only this task's bounded commit; no stored-record conversion or external service needed.
 - **Observability:** Existing diagnostics unchanged; record exact test/build/browser outcomes in evidence. No new telemetry for a name change.
 - **Stop / escalate:** Any proposed storage-key/route/database change, missing attribution, publishing trigger, or unrelated test failure; do not silently expand scope.
+
+<a id="gl-local-001"></a>
+
+### GL-LOCAL-001 — Review repeated bullets locally
+
+- **Phase / priority:** M3 / P1.
+- **Requirements:** GL-R-026, GL-R-032; source sections follow those requirement rows.
+- **Depends on:** GL-DOCS-001.
+- **Approval references:** No additional gate for additive read-only local review; A-START-001 applies.
+- **Edit boundary and reuse:** Existing resume viewer, standalone pure frontend rule, translated panel, Vitest coverage; reuse viewer data and edit action.
+- **Behavior / interfaces:** Case-sensitive exact comparison after whitespace normalization of stored work/project bullets, including hidden sections. Show original excerpt and every entry/bullet location. No network, persistence, edits, scores or PDF-layout claims. Bound input; unsupported data produces unavailable, never a clean result.
+- **Acceptance:** Repeats across and within sections found; unique/empty, malformed and oversized inputs handled; no mutation; report follows latest resume data; editor action works and panel is excluded from print.
+- **Verification / client proof:** Unit/component/viewer regression checks, lint/typecheck/locales; open an existing resume with repeated bullets, expand the local review and follow Edit.
+- **Recovery:** Revert bounded feature commit; no stored records changed.
+- **Observability:** Explicit local unavailable/empty/result states; no resume logs or telemetry.
+- **Stop / escalate:** New data transmission, storage or backend change required.

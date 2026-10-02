@@ -1139,5 +1139,19 @@
       "skillGaps": "Brechas de habilidades",
       "talkingPoints": "Puntos clave"
     }
+  },
+  "localReview": {
+    "title": "Revisión local · Viñetas repetidas",
+    "scope": "Comprueba las viñetas guardadas de experiencia y proyectos, incluidas secciones ocultas, en este navegador. Sin IA. Ignora espacios y distingue mayúsculas. No evalúa el PDF original ni la compatibilidad ATS.",
+    "invalid": "Revisión no disponible: formato de viñetas no compatible.",
+    "limit": "Revisión no disponible: el currículum supera los límites locales.",
+    "empty": "No hay viñetas de experiencia o proyectos para revisar.",
+    "clear": "{count} entradas revisadas; no se encontró texto no vacío repetido.",
+    "found": "Pasajes repetidos: {count}.",
+    "advice": "La repetición puede ser intencional. Revisa cada ubicación antes de editar; no se realizan cambios automáticos.",
+    "workExperience": "Experiencia {entry}, viñeta {bullet}",
+    "personalProjects": "Proyecto {entry}, viñeta {bullet}",
+    "more": "Se muestran los primeros 20 pasajes repetidos. Revisa el resto en el editor.",
+    "edit": "Revisar en el editor"
   }
 }

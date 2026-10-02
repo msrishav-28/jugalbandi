@@ -1139,5 +1139,19 @@
       "skillGaps": "Lacunas de habilidades",
       "talkingPoints": "Pontos de conversa"
     }
+  },
+  "localReview": {
+    "title": "Revisão local · Tópicos repetidos",
+    "scope": "Verifica neste navegador os tópicos salvos de experiências e projetos, incluindo seções ocultas. Sem IA. Ignora espaços e diferencia maiúsculas. Não avalia o PDF original nem a compatibilidade ATS.",
+    "invalid": "Revisão indisponível: formato de tópicos não compatível.",
+    "limit": "Revisão indisponível: o currículo excede os limites locais.",
+    "empty": "Nenhum tópico de experiência ou projeto para verificar.",
+    "clear": "{count} entradas verificadas; nenhum texto não vazio repetido.",
+    "found": "Trechos repetidos: {count}.",
+    "advice": "A repetição pode ser intencional. Revise cada local antes de editar; nenhuma alteração é automática.",
+    "workExperience": "Experiência {entry}, tópico {bullet}",
+    "personalProjects": "Projeto {entry}, tópico {bullet}",
+    "more": "Exibindo os primeiros 20 trechos repetidos. Revise os demais no editor.",
+    "edit": "Revisar no editor"
   }
 }

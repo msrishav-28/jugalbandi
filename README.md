@@ -12,7 +12,7 @@ Jugalbandi is intended to be installed and run on your own computer. No Jugalban
 - [Current technology stack](#current-jugalbandi-stack-2026-10-01) and [verification evidence](plan/delivery/EVIDENCE.md).
 - [Engineering instructions](AGENTS.md), [delivery handbook](plan/delivery/README.md) and [task tracker](plan/delivery/TRACKER.md).
 
-Existing features include the resume editor, tailoring, application tracker, wizard and PDF export. Evidence-backed analysis is planned. The earlier private hosted beta is a conditional future option; invitations, managed accounts and hosting are not requirements for running today's local product. Full runtime verification still has the recorded backend and font-download blockers.
+Existing features include the resume editor, tailoring, application tracker, wizard and PDF export. A local repeated-bullet review is available in the resume viewer. Original-document layout and broader evidence-backed analysis remain planned. The earlier private hosted beta is a conditional future option; invitations, managed accounts and hosting are not requirements for running today's local product. Full runtime verification still has the recorded backend and font-download blockers.
 
 ## Upstream foundation and attribution
 

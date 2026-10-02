@@ -1139,5 +1139,19 @@
       "skillGaps": "Skill Gaps",
       "talkingPoints": "Talking Points"
     }
+  },
+  "localReview": {
+    "title": "Local review · Repeated bullets",
+    "scope": "Checks stored work-experience and project bullets, including hidden sections, in this browser. No AI calls. Whitespace is ignored; case is preserved. This does not assess the original PDF or ATS compatibility.",
+    "invalid": "Review unavailable: the saved bullet data is not in a supported format.",
+    "limit": "Review unavailable: this resume exceeds the local review limits.",
+    "empty": "No work-experience or project bullets to check.",
+    "clear": "Checked {count} bullet entries; no repeated non-empty text found.",
+    "found": "Repeated passages: {count}.",
+    "advice": "Repetition may be intentional. Review each location before editing; no changes are made automatically.",
+    "workExperience": "Work experience {entry}, bullet {bullet}",
+    "personalProjects": "Project {entry}, bullet {bullet}",
+    "more": "Showing the first 20 repeated passages. Review the rest in the editor.",
+    "edit": "Review in editor"
   }
 }

@@ -141,6 +141,22 @@ beforeEach(() => {
   mockedApplyEnhancements.mockResolvedValue({ message: 'Saved', updated_items: 1 });
 });
 
+it('reviews loaded bullets locally without calling enrichment', async () => {
+  const loaded = resume('Local review');
+  if (!loaded.processed_resume) throw new Error('Expected structured fixture');
+  loaded.processed_resume.workExperience = [
+    { id: 1, description: ['Built internal tools', 'Built internal tools'] },
+  ];
+  mockedFetchResume.mockResolvedValueOnce(loaded);
+  render(<ResumeViewerPage />);
+  fireEvent.click(await screen.findByText('localReview.title'));
+  expect(screen.getByText('Built internal tools')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'localReview.edit' })).toBeInTheDocument();
+  expect(mockedFetchResume).toHaveBeenCalledTimes(1);
+  expect(mockedAnalyzeResume).not.toHaveBeenCalled();
+  expect(mockedGenerateEnhancements).not.toHaveBeenCalled();
+});
+
 describe('resume viewer enrichment completion', () => {
   it('shows a refresh-only retry after apply succeeds and refresh fails', async () => {
     mockedFetchResume

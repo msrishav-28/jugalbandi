@@ -50,3 +50,7 @@ Client decisions and consent restrictions govern scope. Verified code establishe
 On source edits: compare stored source hashes in [evidence](EVIDENCE.md), re-enumerate sections, update line spans and dispositions, inspect newly added bullets/tables, and revalidate linked tasks. A section mapping alone cannot excuse a missed subrequirement; reviewers must compare the entire cited span against the requirement's stated retained scope.
 
 The source examples' person names and resume text are not copied into new test fixtures. Use synthetic examples. Company prestige, identity and demographic attributes never become quality labels.
+
+## Local slice scheduling — 2026-10-02
+
+GL-LOCAL-001 contributes to GL-R-026/032 through a bounded read-only check on already-loaded resume data. It does not complete either broader requirement. It requires no hosted identity, PostgreSQL, durable worker, upload or external processing change, so it proceeds independently of those conditional task chains. Existing editor/navigation/data behavior is reused. Original-document geometry, versioned persisted findings and full report contracts remain owned by the original tasks.

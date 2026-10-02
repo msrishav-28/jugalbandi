@@ -33,6 +33,7 @@ import { withLocalizedDefaultSections } from '@/lib/utils/section-helpers';
 import { useLanguage } from '@/lib/context/language-context';
 import { downloadBlobAsFile, openUrlInNewTab, sanitizeFilename } from '@/lib/utils/download';
 import { useOperationOwner } from '@/hooks/use-operation-owner';
+import { LocalBulletReview } from '@/components/resume/local-bullet-review';
 
 type ProcessingStatus = 'pending' | 'processing' | 'ready' | 'failed';
 
@@ -596,6 +597,8 @@ export default function ResumeViewerPage() {
             </Button>
           )}
         </div>
+
+        <LocalBulletReview key={resumeId} resume={resumeData} onEdit={handleEdit} />
 
         {/* Resume Viewer */}
         <div className="flex justify-center pb-4">

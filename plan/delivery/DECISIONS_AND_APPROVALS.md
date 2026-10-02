@@ -144,3 +144,7 @@ Client: “align every single md file ... surgical edits” and “i hope we are
 | ID | Status | Authorized action | Evidence | Explicit boundary | Gate coverage |
 |---|---|---|---|---|---|
 | A-DOC-003 | APPROVED | Audit project Markdown and make surgical alignment edits, including root README | Client request and local-use clarification, 2026-10-02 | Documentation only; preserve application, four source plans, credits, history and deployment configuration | A-DOC-001 |
+
+## Local review implementation — 2026-10-02
+
+Client requested continuing code without waiting for the Windows environment repair. Available checks remain required; blocked checks remain disclosed. A-START-001 covers a reversible local, read-only repeated-bullet review in the existing resume viewer, with no new requests, storage, provider calls, account changes or deployment. This does not approve the entire hosted architecture or waive verification.
