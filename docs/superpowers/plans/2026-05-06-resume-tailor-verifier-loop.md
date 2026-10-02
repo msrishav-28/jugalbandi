@@ -1,5 +1,7 @@
 # Resume Tailor Verifier Loop Implementation Plan
 
+> **Historical record:** Preserved upstream design/review material. Commands, task checkboxes, test totals and prior approvals describe that work, not current Jugalbandi completion or authorization. “Hosted review” refers to the historical review workflow, not a requirement to host Jugalbandi. Follow the [current handbook](../../../plan/delivery/README.md) for local-first scope, verification and approvals; do not replay these plans or their no-test overrides automatically.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Make full resume tailoring add JD-aligned skills and improve work/project wording through smaller structured LLM passes guarded by local verification.

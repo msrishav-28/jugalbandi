@@ -1,5 +1,7 @@
 # Design: Three New Resume Templates — LaTeX, Clean, Vivid
 
+> **Historical record:** Preserved upstream design/review material. Commands, task checkboxes, test totals and prior approvals describe that work, not current Jugalbandi completion or authorization. “Hosted review” refers to the historical review workflow, not a requirement to host Jugalbandi. Follow the [current handbook](../../../plan/delivery/README.md) for local-first scope, verification and approvals; do not replay these plans or their no-test overrides automatically.
+
 > **Status:** Approved (design). **Date:** 2026-06-03. **Branch:** `feat/resume-templates-latex-clean-vivid`
 
 ## Goal

@@ -4,13 +4,27 @@ Jugalbandi builds on Resume Matcher. The current code supports resume creation, 
 
 Start with [the delivery handbook](plan/delivery/README.md), [current task tracker](plan/delivery/TRACKER.md), and [handoff](plan/delivery/HANDOFF.md). Original upstream documentation and credit follow; upstream links describe the foundation, not a Jugalbandi hosted service.
 
+## Run locally and contribute
+
+Jugalbandi is intended to be installed and run on your own computer. No Jugalbandi hosting account or deployment is required. A configured external AI provider can receive content; choose local-model processing if you need a local provider, and verify your configuration. Local installation is not an automatic offline guarantee.
+
+- [Local setup](SETUP.md) and [developer quickstart](docs/agent/quickstart.md).
+- [Current technology stack](#current-jugalbandi-stack-2026-10-01) and [verification evidence](plan/delivery/EVIDENCE.md).
+- [Engineering instructions](AGENTS.md), [delivery handbook](plan/delivery/README.md) and [task tracker](plan/delivery/TRACKER.md).
+
+Existing features include the resume editor, tailoring, application tracker, wizard and PDF export. Evidence-backed analysis is planned. The earlier private hosted beta is a conditional future option; invitations, managed accounts and hosting are not requirements for running today's local product. Full runtime verification still has the recorded backend and font-download blockers.
+
+## Upstream foundation and attribution
+
+The material below preserves Resume Matcher's history, contributors, screenshots and resources. Its star counts, release badge, donations, communities and published container images refer to upstream, not a hosted Jugalbandi service. Existing names in saved keys and package identifiers are retained for compatibility. Use the Jugalbandi setup and handbook above for current development decisions.
+
 ---
 
 <div align="center">
 
 [![Resume Matcher](assets/header.png)](https://www.resumematcher.fyi)
 
-# Resume Matcher
+## Resume Matcher
 
 [𝙹𝚘𝚒𝚗 𝙳𝚒𝚜𝚌𝚘𝚛𝚍](https://dsc.gg/resume-matcher) ✦ [𝚆𝚎𝚋𝚜𝚒𝚝𝚎](https://resumematcher.fyi) ✦ [𝙷𝚘𝚠 𝚝𝚘 𝙸𝚗𝚜𝚝𝚊𝚕𝚕](https://resumematcher.fyi/docs/installation) ✦ [𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚘𝚛𝚜](#contributors) ✦ [𝚂𝚙𝚘𝚗𝚜𝚘𝚛](#sponsors) ✦ [𝚃𝚠𝚒𝚝𝚝𝚎𝚛/𝚇](https://twitter.com/srbhrai) ✦ [𝙻𝚒𝚗𝚔𝚎𝚍𝙸𝚗](https://www.linkedin.com/company/resume-matcher/) ✦ [𝙲𝚛𝚎𝚊𝚝𝚘𝚛](https://srbhr.com)
 

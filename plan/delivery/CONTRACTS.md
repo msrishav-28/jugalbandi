@@ -1,5 +1,7 @@
 # Contract specification
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Target only, 2026-09-30. These additions are not implemented endpoints. GL-CONTRACT-001 turns this behavioral specification into Pydantic/OpenAPI and generated client contracts after baseline/provider review. Existing APIs remain compatible unless a separately approved change is recorded.
 
 ## Common rules

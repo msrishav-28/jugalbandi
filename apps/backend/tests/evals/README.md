@@ -1,5 +1,7 @@
 # Eval harness — "did the prompt change make tailoring _better_?"
 
+**Execution boundary:** These optional checks can send text to providers and incur charges. Local installation does not authorize external calls. Use synthetic or explicitly permissioned fixtures, obtain scoped provider/spend authorization, and sanitize artifacts before sharing. Default deterministic tests are separate.
+
 Deterministic tests answer *"is the plumbing correct?"* They can't answer
 *"did this prompt edit make the tailored resume better or worse?"* — that needs
 **evals**. This directory holds the eval harness for the Resume-Matcher

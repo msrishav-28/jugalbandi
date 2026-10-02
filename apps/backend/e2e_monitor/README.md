@@ -1,5 +1,7 @@
 # e2e_monitor — agentic end-to-end monitor
 
+**Execution boundary:** These optional checks can send text to providers and incur charges. Local installation does not authorize external calls. Use synthetic or explicitly permissioned fixtures, obtain scoped provider/spend authorization, and sanitize artifacts before sharing. Default deterministic tests are separate.
+
 An **opt-in, on-demand** harness that drives the real Resume-Matcher app end to end, captures a durable evidence bundle, and has a Claude Code skill judge it. It is a **report, never a gate** — it informs; it never blocks a push and is never wired into CI.
 
 - Design spec: [`docs/superpowers/specs/2026-06-01-agentic-e2e-monitor-design.md`](../../../docs/superpowers/specs/2026-06-01-agentic-e2e-monitor-design.md)

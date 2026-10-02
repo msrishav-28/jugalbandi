@@ -1,8 +1,10 @@
 # Jugalbandi delivery handbook
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Prepared 2026-09-30; execution and product-name update 2026-10-01. Audience: the client, human developers, individual AI agents, and coordinated teams. **The handbook describes the target; the tracker records actual implementation. GoldLens is the historical planning name for Jugalbandi.**
 
-GoldLens extends the existing resume editor and tailoring product with evidence-backed document analysis. First release: invited, private accounts for early-career software candidates in India. Global expansion follows separate evaluation. Optional cloud AI requires consent. Peer comparisons do not block the analyzer beta.
+Jugalbandi extends the existing resume editor and tailoring product with evidence-backed document analysis. The earlier invited-beta profile targets early-career software candidates in India; it is not the current local-installation prerequisite. Global expansion follows separate evaluation. Optional cloud AI requires consent. Peer comparisons do not block the analyzer beta.
 
 ## Start here
 
@@ -18,6 +20,7 @@ Current product milestone: **M0, establish the verified baseline**. This is a ro
 
 | Document | Source of truth for | Maintainer role |
 |---|---|---|
+| [Markdown audit](MARKDOWN_AUDIT.md) | File-by-file documentation alignment and review limits | Documentation owner |
 | [Project Map](PROJECT_MAP.md) | Observed implementation, survey limits, current boundaries | Integration lead |
 | [Source Reconciliation](SOURCE_RECONCILIATION.md) | Resolutions and complete source-section coverage | Product + technical lead |
 | [Requirements](REQUIREMENTS.md) | Required outcomes, disposition, source and task traceability | Product + quality lead |
@@ -45,7 +48,7 @@ Role names assign responsibility, not imaginary staff. Named people must be assi
 
 Adds instructions and delivery records; leaves the four original plans intact. A root-only ignore exception makes `AGENTS.md` eligible for future version control. Delivery of this package alone grants no execution permission. Later client authorization permits bounded implementation and the Jugalbandi rename; see the approval register. Real-data, account, publishing and deployment gates still apply.
 
-Existing code is present but runtime-unverified. Read the evidence gaps before estimating delivery. Source-plan sprint durations and the approximate engagement value are not promises or spending approval. Estimate each ready task after baseline checks, identify the critical dependency chain, and report ranges with staffing assumptions.
+Existing code has partial frontend verification; backend and production-build checks remain blocked as recorded in EVIDENCE.md. Read the evidence gaps before estimating delivery. Source-plan sprint durations and the approximate engagement value are not promises or spending approval. Estimate each ready task after baseline checks, identify the critical dependency chain, and report ranges with staffing assumptions.
 
 ## Maintaining the package
 

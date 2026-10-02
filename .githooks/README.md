@@ -1,5 +1,7 @@
 # Local git hooks (`.githooks/`)
 
+**Jugalbandi scope:** Local hooks apply only when enabled in that clone. Historical timings and upstream branch conventions below are not current verification. Do not bypass a failed check to claim completion; record unavailable checks in the delivery evidence. Push only the authorized non-publishing feature branch.
+
 Version-controlled git hooks for Resume-Matcher. We **do not** run a
 PR-triggered GitHub Actions test workflow (the repo gets a high volume of
 external contributor PRs, and CI would run on every one of them). Instead, the

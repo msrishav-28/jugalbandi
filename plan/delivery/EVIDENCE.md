@@ -80,3 +80,7 @@ Outcome: REVIEWED_WITH_LIMITS. 2026-10-01. Recorded client answers without chang
 ## EV-DECISIONS-002 — Retention and invitation confirmation
 
 Outcome: REVIEWED_WITH_LIMITS. 2026-10-01. Recorded client “1 A, 2 A, 3A” and reconciled the privacy specification with upload-based 30-day retention plus seven-day recovery and three invitations per user / 50-user cap. Documentation consistency and validator cases checked. No runtime policy implementation or test pass claimed.
+
+## EV-DOC-004 — Project-wide Markdown alignment
+
+Outcome: PASS. 2026-10-02; Windows, Node v24.17.0; starting revision 74778a5, reviewed document identity DOCSET-2026-10-02-v6. Documentation-only self-review; all 106 starting tracked Markdown files enumerated, with dispositions in MARKDOWN_AUDIT.csv. Local file-target scan checked 626 starting-document targets outside fenced examples, no missing targets. Exact repeatable checks: `node plan/delivery/validate-docs.cjs`, `node plan/delivery/validate-docs.test.cjs`, `git diff --check`. Final result: handbook validation, all eleven validator cases and whitespace checks passed. During REVALIDATION_REQUIRED state, the negative approval test reported a different expected failure; the final verified snapshot is checked again without changing the test. Four source plans remain unchanged. No runtime checks, hosting, product behavior, Git history or deployment configuration changed. External URLs and every historical code example were not revalidated. Existing EV-BRAND-001 limitations remain.

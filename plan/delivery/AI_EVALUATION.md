@@ -1,5 +1,7 @@
 # AI evaluation and adoption policy
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Specification date: 2026-09-30. No model benchmark, provider purchase or real-document transmission has been performed for this package.
 
 ## Client explanation

@@ -1,5 +1,7 @@
 # Security specification and review gates
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Target controls, not a completed security assessment. No real-user beta until GL-QA-002 and GL-RELEASE-001 evidence is accepted.
 
 ## Access matrix
@@ -10,10 +12,10 @@ Target controls, not a completed security assessment. No real-user beta until GL
 | Invited verified user | Authorized read/write/delete/export | None | Published aggregate insights only | No | Own approved preferences only |
 | Curator | Own account if separately granted | None by default | Assigned intake/review scope | No self-publication | No |
 | Reviewer/publisher | Own account if granted | None by default | Assigned review, redaction and publication | Step-up + independent review | No |
-| Administrator | No routine blanket content browsing | Exceptional audited access only under policy | Explicit role, not implicit | Explicit role | Step-up restricted operations |
+| Administrator | No support content browsing | No support access, including owner-operated support | Explicit role, not implicit | Explicit role | Step-up restricted operations |
 | Document worker | Job-scoped artifacts only | None outside authorized job | Only assigned corpus job if role permits | No | No interactive credentials |
 | AI worker | Minimized consented task payload | None outside job | Aggregate-only unless separately authorized | No | Approved provider credential access only |
-| Privacy/operator role | Minimum scope for deletion/support | Explicit case scope | Takedown/removal scope | Revoke unsafe publication | No blanket secret access |
+| Privacy/operator role | Lifecycle metadata only; no support content browsing | No support content access | Takedown/removal scope | Revoke unsafe publication | No blanket secret access |
 
 Identity/role checks run on every HTTP route, stream, object authorization and worker fetch/commit. Reauthenticate sensitive account deletion and staff actions. Test invalid signature, issuer, audience, expiry, revoked session and missing claims against the chosen identity provider. Session transport, CSRF protection and rate limits must be specified with that provider before coding; CORS is not authentication.
 

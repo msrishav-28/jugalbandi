@@ -1,4 +1,6 @@
 ---
+
+**Execution boundary:** These optional checks can send text to providers and incur charges. Local installation does not authorize external calls. Use synthetic or explicitly permissioned fixtures, obtain scoped provider/spend authorization, and sanitize artifacts before sharing. Default deterministic tests are separate.
 name: monitor-e2e
 description: Run + judge the Resume-Matcher agentic end-to-end monitor. Drives the real app (master resume → 3–4 tailored variations → PDFs), captures an evidence bundle, then renders an evidence-cited verdict on output quality, flow/render integrity, and provider reality vs a committed baseline. Maintainer-only; makes real, billed LLM calls — do NOT run proactively.
 ---

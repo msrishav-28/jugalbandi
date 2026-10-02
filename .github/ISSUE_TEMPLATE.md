@@ -1,4 +1,6 @@
 # Issue Title
+
+<!-- Jugalbandi: use synthetic reproductions, include local environment and actual checks, and distinguish skipped/blocked checks from passes. Never attach resumes, credentials or private provider payloads. Product changes must reference tracker scope and applicable approvals. -->
 <!-- Provide a concise and descriptive title for the issue -->
 
 ## Type

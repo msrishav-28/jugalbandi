@@ -31,7 +31,7 @@ Before exploring code, read [docs/agent/README.md](../docs/agent/README.md) for 
 1. **All frontend UI changes** MUST follow [Swiss International Style](../docs/portable/swiss-design-system/README.md) — see [tokens](../docs/portable/swiss-design-system/tokens.md), [components](../docs/portable/swiss-design-system/components.md), [anti-patterns](../docs/portable/swiss-design-system/anti-patterns.md)
 2. **All Python functions** MUST have type hints
 3. **Run `npm run lint`** before committing frontend changes
-4. **Run `npm run format`** (Prettier) before committing
+4. **Run `npm exec -- prettier --check <changed-files>`** (Prettier) before committing
 5. **Log detailed errors server-side**, return generic messages to clients
 6. **Do NOT modify** `.github/workflows/` files without explicit request
 
@@ -48,13 +48,13 @@ uv run pytest                                        # Run backend tests (~444; 
 
 # Frontend (from repo root, in a separate terminal)
 cd apps/frontend
-npm install                                          # Install Node.js dependencies
+npm ci                                          # Install Node.js dependencies
 npm run dev                                          # Next.js on :3000
 npm run test                                         # Run frontend tests (vitest)
 
 # Quality checks (from apps/frontend)
 npm run lint          # Lint frontend
-npm run format        # Format with Prettier
+npm exec -- prettier --check <changed-files>        # Format with Prettier
 
 # Build (from apps/frontend)
 npm run build
@@ -87,7 +87,7 @@ apps/
     ├── components/          # UI components (incl. tracker/)
     ├── lib/                 # Utilities, API client (incl. api/tracker.ts)
     ├── hooks/               # Custom React hooks
-    └── messages/            # i18n translations (en, es, zh, ja, pt)
+    └── messages/            # i18n translations (en, es, zh, ja, pt, fr, ko)
 ```
 
 ---
@@ -102,7 +102,7 @@ apps/
 ### For Frontend Changes
 1. [Frontend workflow](../docs/agent/architecture/frontend-workflow.md) - User flow, components
 2. [Swiss design system pack](../docs/portable/swiss-design-system/README.md) - **REQUIRED** Swiss International Style (portable pack)
-3. [Next.js performance pack](../docs/portable/nextjs-performance/README.md) - **REQUIRED** Next.js 15 perf patterns (portable pack)
+3. [Next.js performance pack](../docs/portable/nextjs-performance/README.md) - historical Next.js 15 guidance; check compatibility with installed Next.js 16 before use
 4. [Coding standards](../docs/agent/coding-standards.md) - Frontend conventions
 
 ### For Testing

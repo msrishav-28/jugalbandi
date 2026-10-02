@@ -1,5 +1,7 @@
 # Diff-Based Resume Improvement — Design Spec
 
+> **Historical record:** Preserved upstream design/review material. Commands, task checkboxes, test totals and prior approvals describe that work, not current Jugalbandi completion or authorization. “Hosted review” refers to the historical review workflow, not a requirement to host Jugalbandi. Follow the [current handbook](../../../plan/delivery/README.md) for local-first scope, verification and approvals; do not replay these plans or their no-test overrides automatically.
+
 > **Status**: Design
 > **Date**: 2026-03-23
 > **Scope**: Backend improvement pipeline — `improver.py`, `refiner.py`, `resumes.py`, `templates.py`

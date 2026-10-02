@@ -1,5 +1,7 @@
 # Next.js 15 Performance Pack
 
+> **Compatibility:** This is a historical Next.js 15 reference pack. Check every API and configuration example against the consuming project's installed version before applying it. Example imports are illustrative, not proof that a project implements authentication.
+
 A focused, opinionated guide to the highest-impact performance optimizations for Next.js 15 applications. Adapted from Vercel's react-best-practices, restructured for portability and self-contained reading.
 
 This pack is **self-contained**: every file in this directory links only to siblings here. Drop the whole folder into any project and the cross-references keep working.

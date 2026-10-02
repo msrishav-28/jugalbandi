@@ -1,4 +1,6 @@
-# GoldLens requirements and acceptance register
+# Jugalbandi requirements and acceptance register
+
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
 
 Specification date: 2026-09-30. None of the product requirements below is a runtime completion claim. Live task status is only in [TRACKER](TRACKER.md).
 
@@ -19,7 +21,7 @@ Dispositions: **Retained** = target requirement; **Adapted** = explicit change t
 | GL-R-009 | PDF/DOCX bytes are validated by signature, size, pages and expansion budget; unsafe/password-protected files receive safe actionable errors | U11; P10.1; T8 | Retained / M2 | GL-UPLOAD-001 |
 | GL-R-010 | Quarantine and malware scanning precede parsing; parser containers have bounded resources and denied network; scanner outage fails closed | U11,16; T8,13 | Retained / M2 | GL-UPLOAD-001 |
 | GL-R-011 | Durable jobs survive crashes, handle duplicate delivery, bound retries, expose honest progress and never resurrect deleted documents | U11,19; T16 | Retained / M2 | GL-JOBS-001 |
-| GL-R-012 | User chooses one-time or private retention; telemetry/training are separate default-off choices; choices control all derived artifacts | P8,18; U17 | Retained / M2 | GL-PRIVACY-001 |
+| GL-R-012 | For the conditional hosted profile: 30 days from original upload, then seven-day recovery for resume and revisions; opening/editing never extends the clock; telemetry/training remain separate default-off choices | P8,18; U17 | Retained / M2 | GL-PRIVACY-001 |
 | GL-R-013 | Deletion revokes access, fences work, removes live artifacts and reports actual completion; backup expiry is explained | U17; T14 | Retained / M2 | GL-PRIVACY-002 |
 | GL-R-014 | User can export their stored personal information and remove an account; sensitive confirmation and failures are explicit | P18 | Retained / M2 | GL-PRIVACY-002 |
 | GL-R-015 | Immutable normalized document representation preserves pages, text, spans, styles, bounds, source links and extraction provenance | U10-11; T7-8; P15 | Retained / M3 | GL-DOC-001 |
@@ -48,7 +50,7 @@ Dispositions: **Retained** = target requirement; **Adapted** = explicit change t
 | GL-R-038 | Semantic HTML, keyboard/pin list alternative, focus, contrast, reduced motion, reflow and mobile states work across report/editor journeys | O18; U31 | Retained / M6 | GL-REPORT-003 |
 | GL-R-039 | Extend existing design system with calm editorial reports; no prestige/gamification, hiring guarantees or misleading score language | P2,12,25; O3,17 | Retained / M6 | GL-REPORT-003 |
 | GL-R-040 | Model gateway enforces privacy mode, provider allowlist, minimization, structured output, prompt versions, budgets and safe fallbacks | U14; T11; O13 | Retained / M7 | GL-AI-001 |
-| GL-R-041 | No-LLM analysis works; cloud AI is opt-in; BYOK/local processing are documented later modes, never assumed privacy equivalents | U14; T11.4; C | Adapted / M7-M10 | GL-AI-001, GL-EXPAND-002 |
+| GL-R-041 | No-LLM analysis works; cloud AI is opt-in; BYOK is primary; optional platform-funded allowance stays disabled until budget approval; local processing and external processing are never assumed privacy equivalents | U14; T11.4; C | Adapted / M7-M10 | GL-AI-001, GL-EXPAND-002 |
 | GL-R-042 | Evaluate Jev/Laya on reviewed held-out resume decisions against simple rules; no use as authority for access, consent or factual truth | C | Retained optional / M7 | GL-AI-003 |
 | GL-R-043 | Curator intake records origin, consent scope, tags, redaction and decision; rejected/unapproved material never affects users | P11; U6,15; T12 | Deferred / M9 | GL-CORPUS-001 |
 | GL-R-044 | Evidence tiers 0-4 and trust components are explicit; prestige contributes zero; unknown rights and leaked/paid packs are excluded | P11; U6; T12.4 | Deferred / M9 | GL-CORPUS-001 |
@@ -73,7 +75,7 @@ Dispositions: **Retained** = target requirement; **Adapted** = explicit change t
 | GL-R-063 | Named primary/backup/reviewer responsibilities; small vertical slices, evidence-based PRs, incident learning and regular coordination | U25-30,33; O4-10,15,22 | Retained operating rule | GL-DOCS-001, GL-OPS-002 |
 | GL-R-064 | Stable IDs, scope decisions, approvals, evidence and restart rules allow work from any partial project state without fake completion | C; U33; O21 | Retained documentation | GL-DOCS-001 |
 | GL-R-065 | Broader geographies, seniorities, languages and mentor/org access need new evaluation and ownership contracts; no implicit language-quality claim | P5,21; T24; C | Deferred / M10 | GL-EXPAND-001 |
-| GL-R-066 | Optional version comparison, template repair, discovery, portfolio extension, example display, BYOK/local modes and narrow models have separate complete slices | P21; U15; T24 | Deferred / M10 | GL-EXPAND-002 |
+| GL-R-066 | Optional version comparison, template repair, discovery, portfolio extension, example display, expanded local-model modes and narrow models have separate complete slices | P21; U15; T24 | Deferred / M10 | GL-EXPAND-002 |
 | GL-R-067 | Hiring/mentorship guidance informs role coverage and review capability, not a code dependency or invented staffing commitment | U34,36; O23-24,27-28 | Adapted operating rule | GL-OPS-002 |
 | GL-R-068 | Provider, legal, license, capacity, retention and spend decisions have evidence and explicit launch gates; no unverified vendor promises | P26; T23,26; C | Retained / M0-M8 | GL-BASE-003 |
 

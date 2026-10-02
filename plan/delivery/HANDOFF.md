@@ -1,5 +1,9 @@
 # Jugalbandi handoff checkpoint
 
+## Latest checkpoint — 2026-10-02
+
+Documentation alignment is completed subject to the evidence recorded in EV-DOC-004. Local installation is the default; no hosting is being set up. Earlier hosted-beta task dependencies require applicability review before product implementation. Prior dated sections below are history, not permission to deploy. Read the live tracker, [audit register](MARKDOWN_AUDIT.md) and latest decisions first.
+
 Dated 2026-10-01 (Asia/Calcutta). Live status belongs to [TRACKER](TRACKER.md). Owner: Codex; bounded rename author self-review only.
 
 ## Current working copy
@@ -15,6 +19,9 @@ Client authorized starting code and safe branch pushes; renamed product Jugalban
 [Evidence](EVIDENCE.md) records 677 passing frontend tests with two workers, lint/typecheck/locale pass, desktop/mobile heading inspection and a verified Git history bundle. Production build blocked by remote font downloads. Backend tests blocked by Windows Application Control and shared fixture errors. Full user-flow baseline, private accounts, durable jobs and analyzer remain unverified/unimplemented. The new brand task is IN_REVIEW, not release-ready.
 
 ## Next safe action
+
+First reconcile the existing analyzer task dependencies for local installation. Do not start hosted-account or infrastructure work from the older milestone sequence. The following baseline checks still apply.
+
 
 Inspect Git status and latest branch commit; run node plan/delivery/validate-docs.cjs. Resolve GL-BASE-002's native-library policy with an authorized development environment; do not bypass OS protection. Re-run the backend identity regression and existing baseline suites. Retry production build once fonts are reachable, then verify actual-font browser rendering. Continue GL-BASE-003/004; present concrete account/data proposals before their protected changes. Do not mistake implementation assignment or name change for deployment permission.
 

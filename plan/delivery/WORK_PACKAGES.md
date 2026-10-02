@@ -1,5 +1,7 @@
 # Ordered work packages
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Specification date: 2026-09-30. Status/assignment live only in [TRACKER](TRACKER.md). Requirements and source sections are in [REQUIREMENTS](REQUIREMENTS.md); each card's requirement references inherit those source citations. A phase indicates intended user delivery, not a rule to execute unrelated tasks in lockstep. The dependency graph is authoritative.
 
 ## Rules shared by every card
@@ -77,7 +79,7 @@ GL-QA-001 may proceed alongside baseline work. GL-STORAGE-001 and GL-JOBS-001 ca
 - **Depends on:** GL-BASE-001, GL-BASE-002.
 - **Approval references:** No additional gate for read-only/synthetic work; root approval rules still apply.
 - **Edit boundary and reuse:** Decision dossier and concrete approval proposals only.
-- **Behavior / interfaces:** Evaluate official docs for auth, PostgreSQL, storage, queue, parsers/converter/OCR, hosting and telemetry. Select compatible versions and one recommended stack; inspect licenses, regions, privacy terms, backup limits and costs. Set proposed beta capacity, quotas, retention and evaluation gates with named reviewers.
+- **Behavior / interfaces:** Evaluate official docs for auth, PostgreSQL, storage, queue, parsers/converter/OCR, hosting and telemetry. Select compatible versions and one recommended stack; inspect licenses, regions, privacy terms, backup limits and costs. Use confirmed hosted-profile assumptions (50 invited users, about 5 simultaneous, 30 days from upload plus seven-day recovery) only if hosted work is separately resumed; determine local prerequisites first. Set remaining quotas and evaluation gates with named reviewers.
 - **Acceptance:** No slash-separated tool choices left in ready implementation cards; dossiers identify evidence, cost assumptions, rollback, unsupported requirements and required approvals; zero purchases.
 - **Verification / client proof:** Review selected versions against manifests and synthetic feasibility criteria; client sees business consequences, not framework choices.
 - **Recovery:** Revise decision record with supersession; no service has been provisioned.
@@ -253,7 +255,7 @@ GL-QA-001 may proceed alongside baseline work. GL-STORAGE-001 and GL-JOBS-001 ca
 - **Depends on:** GL-STORAGE-001, GL-IDENTITY-003.
 - **Approval references:** G-DATA, G-UX.
 - **Edit boundary and reuse:** Consent/retention records and user controls.
-- **Behavior / interfaces:** Separate one-time/private retention, cloud AI, telemetry and training choices. Version consent; require approved exact TTLs and purpose copy. Expire abandoned/temporary artifacts; no inferred corpus contribution.
+- **Behavior / interfaces:** For the conditional hosted profile apply upload-based 30-day retention and seven-day recovery; separate cloud AI, telemetry and training choices. Version consent; require approved exact TTLs and purpose copy. Expire abandoned/temporary artifacts; no inferred corpus contribution.
 - **Acceptance:** No bundled opt-in; lack of policy blocks real ingestion; withdrawal affects future processing; retention runs include derived content.
 - **Verification / client proof:** Consent matrix and expiry-clock tests; client reads actual data-flow explanation.
 - **Recovery:** Stop optional processing; preserve required deletion jobs and recorded consent history.
@@ -716,7 +718,7 @@ GL-QA-001 may proceed alongside baseline work. GL-STORAGE-001 and GL-JOBS-001 ca
 - **Requirements:** GL-R-037, GL-R-041, GL-R-048, GL-R-050, GL-R-066; source sections follow those requirement rows.
 - **Depends on:** GL-RELEASE-001.
 - **Approval references:** G-EXPAND.
-- **Edit boundary and reuse:** Version comparison, style repair, discovery, example display, local/BYOK and narrow-model proposals.
+- **Edit boundary and reuse:** Version comparison, style repair, discovery, example display, expanded local-model and narrow-model proposals; BYOK belongs to GL-AI-001.
 - **Behavior / interfaces:** Before coding split each selected feature into its own stable task with contracts, consent, tests and recovery. Permitted discovery requires provenance checks before download; example display separate rights; training separate dataset consent; template repair preview; local/BYOK truthful network policy.
 - **Acceptance:** Each selected child task is decision-complete and approved; unselected features remain deferred without dead UI; no autonomous scraping/training.
 - **Verification / client proof:** Specification/coverage review first; subsequent feature-specific integration/security/quality tests required.

@@ -1,5 +1,7 @@
 # Verification and evidence standard
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 This file specifies checks. Actual execution results are in [EVIDENCE](EVIDENCE.md), and task progress is in [TRACKER](TRACKER.md). Historical counts in older docs are not current evidence.
 
 ## Existing commands and prerequisites
@@ -48,7 +50,7 @@ Freeze numeric quality thresholds and sample sizes before held-out evaluation (G
 Use synthetic resume and job data in an approved preview/staging environment:
 
 1. Accept an invitation and sign in. An uninvited account cannot access private material.
-2. Upload the sample PDF/DOCX and choose retention. See real processing stages and actionable errors for a deliberately bad file.
+2. Upload the synthetic sample PDF/DOCX and inspect the applicable retention policy (the conditional hosted profile is 30 days plus seven-day recovery). See real processing stages and actionable errors for a deliberately bad file.
 3. Open the report, select a finding and confirm the highlighted page location matches its explanation.
 4. Dismiss or mark it intentional; refresh and confirm the choice persists without altering original content.
 5. Paste a job description and inspect demonstrated versus missing evidence.

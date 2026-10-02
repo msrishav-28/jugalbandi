@@ -20,7 +20,7 @@ Generic, reusable guides (Swiss design system, Next.js performance) live in [`..
 
 ### Architecture
 
-See the [hosted review corrections](architecture/hosted-review-corrections.md) for the verified PR stack, per-comment outcomes and full file inventory.
+See the [hosted review corrections](architecture/hosted-review-corrections.md) for the historical upstream PR stack, per-comment outcomes and full file inventory.
 
 | Doc                                                              | Purpose                                                         |
 | ---------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -78,7 +78,7 @@ See the [hosted review corrections](architecture/hosted-review-corrections.md) f
 | Pack                                                             | Purpose                                                                   |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | [swiss-design-system](../portable/swiss-design-system/README.md) | Full Swiss style design system — required reading for frontend work       |
-| [nextjs-performance](../portable/nextjs-performance/README.md)   | Next.js 15 performance optimizations — required reading for frontend work |
+| [nextjs-performance](../portable/nextjs-performance/README.md)   | Historical Next.js 15 guidance; verify compatibility with installed Next.js 16 |
 
 ## Project Structure
 

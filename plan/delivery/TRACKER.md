@@ -1,6 +1,6 @@
 # Delivery tracker
 
-**Single status authority.** Updated 2026-09-30. Product phase: M0 baseline; no GoldLens product milestone is verified. Detailed acceptance and edit boundaries live in [work packages](WORK_PACKAGES.md), and source sections are inherited through [requirements](REQUIREMENTS.md). Do not copy live status into those documents.
+**Single status authority.** Updated 2026-10-02. Product phase: M0 baseline; no Jugalbandi analyzer milestone is verified. Hosted-task scheduling is conditional following the local-use clarification. Detailed acceptance and edit boundaries live in [work packages](WORK_PACKAGES.md), and source sections are inherited through [requirements](REQUIREMENTS.md). Do not copy live status into those documents.
 
 ## State and evidence rules
 
@@ -18,7 +18,7 @@ Initial “—” means not performed/not assigned, never success. Source files 
 
 | Task | Phase | Priority | Requirements | Dependencies | Gate categories | Owner | Reviewer | State | Evidence | Verified date | Revision/fingerprint | Next action or blocker |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-003 | 2026-10-01 | DOCSET-2026-10-01-v5 | Handbook updated for repository execution and Jugalbandi name; product remains unverified |
+| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-004 | 2026-10-02 | DOCSET-2026-10-02-v6 | Markdown aligned for local use; hosted task sequence must be reconsidered before implementation |
 | [GL-BASE-001](WORK_PACKAGES.md#gl-base-001) | M0 | P0 | GL-R-002 | GL-DOCS-001 | G-BASE | Unassigned | Unassigned | BLOCKED | — | — | — | Revalidate handbook; remote provenance inspected and separate clone acquired |
 | [GL-BASE-002](WORK_PACKAGES.md#gl-base-002) | M0 | P0 | GL-R-003 | GL-DOCS-001 | — | Unassigned | Unassigned | BLOCKED | EV-BRAND-001 | — | — | Python/dependencies installed; native-library policy and production font fetch block full baseline |
 | [GL-BASE-003](WORK_PACKAGES.md#gl-base-003) | M0 | P0 | GL-R-068 | GL-BASE-001, GL-BASE-002 | — | Unassigned | Unassigned | NOT_STARTED | — | — | — | Verify dependencies and scope before claim |
@@ -83,3 +83,7 @@ Owner: Codex. Reviewer: author self-review (bounded brand copy only). Approval: 
 ### 2026-10-01 — GL-DOCS-001
 
 Owner: Codex. Reviewer: author self-review, documentation only. Approval: A-DOC-001, A-DOC-002. Allowed paths: existing root README/SETUP variants, existing agent index/quickstart/workflow/testing/architecture guides, existing CLAUDE guides, and delivery records. Preserve original four plans, attribution, application code and configuration. Client asks for surgical additions and corrections. Verify against manifests/callers, review every diff, check added local links and handbook consistency, then commit/push the existing non-publishing branch.
+
+## Documentation alignment claim — 2026-10-02
+
+GL-DOCS-001 owner: Codex; reviewer: self-review only. Approval: A-DOC-003. Edit boundary: tracked Markdown, documentation audit and fingerprints only. Reconcile local-use direction, current manifests and later client decisions; preserve original source plans and attribution. Checkpoint: documentation checks and branch push; no deployment or application changes.

@@ -1,5 +1,7 @@
 # Resume Wizard Design
 
+> **Historical record:** Preserved upstream design/review material. Commands, task checkboxes, test totals and prior approvals describe that work, not current Jugalbandi completion or authorization. “Hosted review” refers to the historical review workflow, not a requirement to host Jugalbandi. Follow the [current handbook](../../../plan/delivery/README.md) for local-first scope, verification and approvals; do not replay these plans or their no-test overrides automatically.
+
 ## Goal
 
 Add a general-master-resume creation pipeline for users who do not already have a PDF or DOCX resume. The existing upload path remains the fast path, while the new wizard helps users create a truthful structured master resume from scratch through a hybrid one-question-at-a-time Q&A.

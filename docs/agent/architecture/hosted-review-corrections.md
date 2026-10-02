@@ -1,5 +1,7 @@
 # Hosted review corrections — 6 September 2026
 
+> **Historical record:** Preserved upstream design/review material. Commands, task checkboxes, test totals and prior approvals describe that work, not current Jugalbandi completion or authorization. “Hosted review” refers to the historical review workflow, not a requirement to host Jugalbandi. Follow the [current handbook](../../../plan/delivery/README.md) for local-first scope, verification and approvals; do not replay these plans or their no-test overrides automatically.
+
 The 17 reliability PRs (#976–#992) address the confirmed audit issues #932–#975. This report records the follow-up review of every nonempty hosted review body in the original capture and the following hosted round: **314 records** (258 original plus 56 follow-ups), including **256 inline records**. Records include repeated comments and summaries; these counts are not counts of distinct bugs.
 
 The [per-comment ledger](hosted-review-dispositions.csv) records the original GitHub URL, file, outcome, integrated commits and evidence for every record. Outcomes: **173 fixed, 97 duplicate, 13 already resolved and 31 not actionable**. No captured record remains pending. The [511-file inventory](reliability-file-inventory.csv) maps every tracked file to its role and affected audit issues. The [reliability map](reliability-map.md) connects those files to the complete resume flows and reproducible checks.

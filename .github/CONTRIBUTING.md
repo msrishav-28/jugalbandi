@@ -1,5 +1,13 @@
 # Contributing to Resume-Matcher on GitHub
 
+## Current Jugalbandi development
+
+Use [local setup](../SETUP.md), [quickstart](../docs/agent/quickstart.md) and [root instructions](../AGENTS.md). Extend the existing Next.js/FastAPI/SQLite product. Work on a non-publishing feature branch; merge, release and history replacement require their scoped approvals. Check only named changed files with the existing formatter.
+
+## Historical upstream contribution guide
+
+The material below is retained as upstream history. Its Streamlit, Python 3.11, requirements.txt, Data folders, root-wide formatting, port 80 and pre-commit setup are not instructions for this checkout. Do not remove sample folders or install historical tooling by following it. Current Python requires 3.13 or newer; use the linked local setup. Upstream communities and contribution links remain attributed to their owners.
+
 Thank you for taking the time to contribute to [Resume-Matcher](https://github.com/srbhr/Resume-Matcher).
 
 We want you to have a great experience making your first contribution.
@@ -165,7 +173,7 @@ Follow these steps to set up the environment and run the application.
 
 The full stack Next.js (React and FastAPI) web application allows users to interact with the Resume Matcher tool interactively via a web browser.
 
-To run the full stack web application (frontend client and backend api servers), follow the instructions over on the [webapp README](/webapp/README.md) file.
+To run the full stack web application (frontend client and backend api servers), follow the instructions over on the [current local setup](../SETUP.md) (the historical webapp README is absent from this checkout) file.
 
 ## Code Formatting
 

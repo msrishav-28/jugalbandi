@@ -1,5 +1,9 @@
 > **Jugalbandi — actualización 2026-10-01:** El proyecto amplía Resume Matcher y conserva sus créditos. Consulte el [manual de entrega](plan/delivery/README.md) y las [pruebas registradas](plan/delivery/EVIDENCE.md) (en inglés). GoldLens es el nombre histórico del plan. Las cuentas privadas, PostgreSQL y el analizador siguen planificados. Las imágenes y ejemplos de despliegue originales no representan un servicio Jugalbandi publicado.
 
+**Uso local:** Jugalbandi se instala y ejecuta en tu ordenador; no estamos creando un servicio alojado. Las funciones de beta alojada son una opción futura. Un proveedor de IA externo configurado puede recibir contenido. Los enlaces, donaciones e imágenes del proyecto original conservan su atribución.
+
+[Current scope / 当前范围 / 現在の範囲](plan/delivery/DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02).
+
 # Guía de configuración de Resume Matcher
 
 [English](SETUP.md) | [**Español**](SETUP.es.md) | [简体中文](SETUP.zh-CN.md) | [日本語](SETUP.ja.md)
@@ -338,7 +342,7 @@ uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
 uv sync
 
 # Instalar con dependencias de desarrollo (para tests)
-uv sync --group dev
+uv sync --extra dev
 
 # Ejecutar tests
 uv run pytest
@@ -365,7 +369,7 @@ npm run start
 npm run lint
 
 # Formatear código con Prettier
-npm run format
+npm exec -- prettier --check <changed-files>
 
 # Ejecutar en un puerto diferente
 npm run dev -- -p 3001

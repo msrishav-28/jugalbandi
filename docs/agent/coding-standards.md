@@ -1,5 +1,7 @@
 # Coding Standards
 
+Formatting command examples use `<changed-files>` as a placeholder for explicitly named files; do not type the angle brackets. Check only files being changed; use `--write` on those same named files if formatting needs correction.
+
 > **Frontend and backend coding conventions.**
 
 ## Frontend (TypeScript/React)
@@ -31,7 +33,7 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
 
 ### Before Committing
 
-1. Run Prettier: `npm run format`
+1. Run Prettier: `npm exec -- prettier --check <changed-files>`
 2. Run linter: `npm run lint`
 
 ## Backend (Python/FastAPI)

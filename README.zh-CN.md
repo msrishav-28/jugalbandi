@@ -1,5 +1,9 @@
 > **Jugalbandi 更新（2026-10-01）：** 本项目基于 Resume Matcher，保留原作者署名。请参阅[交付手册](plan/delivery/README.md)和[验证记录](plan/delivery/EVIDENCE.md)（英文）。GoldLens 是规划阶段的旧名称。独立私有账户、PostgreSQL 和文档分析器仍属于计划功能。下文原项目的镜像和部署示例不代表已发布的 Jugalbandi 服务。
 
+**本地使用：** Jugalbandi 安装并运行在自己的电脑上；目前不会创建托管服务。托管测试版只是未来选项。配置外部 AI 提供商后，内容可能发送到外部。原项目的链接、捐赠信息和署名保持不变。
+
+[Current scope / 当前范围 / 現在の範囲](plan/delivery/DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02).
+
 <div align="center">
 
 [![Resume Matcher](assets/header.png)](https://www.resumematcher.fyi)

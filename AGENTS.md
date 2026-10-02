@@ -1,5 +1,7 @@
 # Jugalbandi engineering instructions
 
+**Current delivery scope (2026-10-02):** Local installation is the default. Do not host, provision or deploy this project. Hosted-beta requirements are conditional future work; reconcile task applicability before implementing them. See the latest [decision](plan/delivery/DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02).
+
 These instructions apply to humans and AI agents working in this repository. Read [the delivery index](plan/delivery/README.md) first. The client authorized implementation and renamed the product **Jugalbandi** on 2026-10-01. Follow the tracker and scoped approvals; implementation permission is not permission to deploy, rewrite history, remove attribution, or change protected data/account behavior. Historical GoldLens plans and GL-* IDs remain stable.
 
 ## Start or resume

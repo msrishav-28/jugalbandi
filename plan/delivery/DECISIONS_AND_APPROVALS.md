@@ -136,3 +136,11 @@ Original wording: client answered questionnaire choices on 2026-10-01 and said �
 ## Retention and invitations confirmed — 2026-10-01
 
 Client answered “1 A, 2 A, 3A”: 30 days from original upload, with no extension for opening/editing; at automatic expiry the resume and its revisions enter a seven-day recovery window, allowing up to 37 days in live storage; three invitations per user initially, subject to the overall 50-user beta limit. Manual deletion also has the already-selected seven-day recovery period. Backup expiry remains a separate hosting policy, not an immediate-erasure promise. These are confirmed product rules; physical deletion, account implementation, paid infrastructure and history replacement remain subject to their scoped gates.
+
+## Local use and full documentation alignment — 2026-10-02
+
+Client: “align every single md file ... surgical edits” and “i hope we are not trying to host it anywhere because the project can be run by anyone locally”. Local installation is the current delivery default; no service is being hosted, purchased or provisioned. Earlier invited-hosted-beta assumptions are a conditional future profile, not a prerequisite for local use. Preserve their requirements for traceability, but replan their dependency chain before product implementation. Do not impose invitation limits, managed identity, automatic deletion or paid infrastructure on the existing local installation by inference. Existing privacy and validation protections remain required. Local use can still send content to an external AI provider if the user configures one; local installation alone does not mean offline processing.
+
+| ID | Status | Authorized action | Evidence | Explicit boundary | Gate coverage |
+|---|---|---|---|---|---|
+| A-DOC-003 | APPROVED | Audit project Markdown and make surgical alignment edits, including root README | Client request and local-use clarification, 2026-10-02 | Documentation only; preserve application, four source plans, credits, history and deployment configuration | A-DOC-001 |

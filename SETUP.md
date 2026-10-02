@@ -1,4 +1,6 @@
-# Resume Matcher Setup Guide
+# Jugalbandi Local Setup Guide
+
+**Local use is the default (2026-10-02).** These instructions run the product on your computer. Container examples are optional local packaging; upstream image examples do not contain this branch's Jugalbandi changes. No hosted service is being provisioned. AI provider configuration determines whether document text leaves your computer; existing local installation is not a shared-user security boundary.
 
 > **Jugalbandi update — 2026-10-01:** This project extends Resume Matcher; upstream credit and historical material remain. Start with the [delivery handbook](plan/delivery/README.md) and [current evidence](plan/delivery/EVIDENCE.md). GoldLens is the historical planning name. Private accounts, PostgreSQL and the document analyzer are planned, not available in this code yet. Container images and deployment examples below describe the upstream/local foundation, not an approved Jugalbandi hosted release.
 
@@ -400,7 +402,7 @@ uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
 uv sync
 
 # Install with dev dependencies (for testing)
-uv sync --group dev
+uv sync --extra dev
 
 # Run tests
 uv run pytest
@@ -427,7 +429,7 @@ npm run start
 npm run lint
 
 # Format code with Prettier
-npm run format
+npm exec -- prettier --check <changed-files>
 
 # Run on a different port
 npm run dev -- -p 3001

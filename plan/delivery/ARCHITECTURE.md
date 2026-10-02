@@ -1,5 +1,7 @@
 # Architecture and transition specification
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Target specification, 2026-09-30. Existing implementation is described in [Project Map](PROJECT_MAP.md). This file does not claim these services exist. Provider/tool selection is gated by GL-BASE-003 and [approvals](DECISIONS_AND_APPROVALS.md).
 
 ## Boundaries and reuse

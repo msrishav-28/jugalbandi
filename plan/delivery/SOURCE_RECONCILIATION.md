@@ -1,5 +1,7 @@
 # Source reconciliation and coverage
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Date: 2026-09-30. The four source files remain unchanged. This document resolves their conflicts for the approved delivery handbook. [Requirements](REQUIREMENTS.md) retains substantive behavior; [section coverage](SOURCE_COVERAGE.csv) enumerates source headings, line ranges, dispositions and requirement references.
 
 ## Authority

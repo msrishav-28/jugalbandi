@@ -1,5 +1,7 @@
 # Operations, release and recovery handbook
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Target operating procedures, 2026-09-30. No hosted service, alert destination, on-call rota or recovery rehearsal is established by this document. GL-OPS-001/002 and GL-RELEASE-001 must supply evidence and named operators.
 
 ## Ownership and coordination
@@ -27,7 +29,7 @@ Verified-improvement rate: among consent-eligible users who edit and reanalyze c
 
 ## Service objectives and capacity
 
-Retain the source target: p95 under 20 seconds for two-page born-digital deterministic analysis, excluding optional rewrite; report queue wait and total perceived latency separately. Freeze hardware, dataset mix and concurrency before testing. OCR/DOCX conversion, external AI and exports have separate budgets. Proposed initial load rehearsal: 10 simultaneous analyses and 50 signed-in browser sessions using synthetic data; it is a test profile, not a purchased capacity or verified service guarantee.
+Retain the source target: p95 under 20 seconds for two-page born-digital deterministic analysis, excluding optional rewrite; report queue wait and total perceived latency separately. Freeze hardware, dataset mix and concurrency before testing. OCR/DOCX conversion, external AI and exports have separate budgets. Conditional hosted-beta load rehearsal: 5 simultaneous users within the 50-invited-user cap; any 10-analysis stress run is a separate overload scenario using synthetic data; it is a test profile, not a purchased capacity or verified service guarantee.
 
 Before G-RELEASE, GL-BASE-003/GL-PERF-001 must set approved thresholds for availability, upload/export success, stage timeout, maximum queue age, deletion completion, quotas and monthly/daily/provider spend. Missing thresholds block release, not imply unlimited work. Alerts must correspond to a named action. Notify users of actionable failures without pretending background work completed.
 

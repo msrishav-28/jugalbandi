@@ -1,5 +1,9 @@
 > **Jugalbandi 更新（2026-10-01）：** Resume Matcher を拡張するプロジェクトです。元の作者へのクレジットは維持します。[開発手順](plan/delivery/README.md)と[検証記録](plan/delivery/EVIDENCE.md)（英語）を参照してください。GoldLens は計画時の旧名称です。非公開アカウント、PostgreSQL、文書アナライザーはまだ計画段階です。従来のイメージやデプロイ例は公開済みの Jugalbandi サービスではありません。
 
+**ローカル利用:** Jugalbandi は自分のコンピューターにインストールして実行します。ホスティングサービスは構築していません。ホスト型ベータは将来の選択肢です。外部 AI プロバイダーを設定すると、内容が外部に送信される場合があります。元プロジェクトのリンクとクレジットは保持しています。
+
+[Current scope / 当前范围 / 現在の範囲](plan/delivery/DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02).
+
 # Resume Matcher セットアップガイド
 
 [English](SETUP.md) | [Español](SETUP.es.md) | [简体中文](SETUP.zh-CN.md) | [**日本語**](SETUP.ja.md)
@@ -338,7 +342,7 @@ uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
 uv sync
 
 # 開発用依存関係も含める（テスト用）
-uv sync --group dev
+uv sync --extra dev
 
 # テスト実行
 uv run pytest
@@ -365,7 +369,7 @@ npm run start
 npm run lint
 
 # Prettier で整形
-npm run format
+npm exec -- prettier --check <changed-files>
 
 # 別ポートで起動
 npm run dev -- -p 3001

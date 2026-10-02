@@ -1,5 +1,7 @@
 # Data ownership, privacy and lifecycle
 
+**Scope update — 2026-10-02:** Local installation is the current default. Hosted accounts, invitation limits, managed infrastructure and release operations below describe a conditional future hosted profile, not local-run prerequisites or execution approval. Reconcile the implementation sequence before starting those tasks. See [decisions](DECISIONS_AND_APPROVALS.md#local-use-and-full-documentation-alignment--2026-10-02); preserve existing local behavior.
+
 Target specification, 2026-09-30. No database or privacy behavior is changed by this document. G-DATA, G-AUTH and applicable provider approvals must precede implementation.
 
 ## Data dictionary and responsibility
@@ -41,7 +43,7 @@ C-02 removes the need for a customer import project now. It does not authorize d
 
 ## Consent and retention
 
-Four independent purposes: one-time analysis/private storage; optional external AI processing; optional de-identified improvement telemetry; optional training/reference contribution. Never make training consent a prerequisite for analysis. A retained user resume is not a reference contribution. Explain what leaves the service, for what purpose, and which approved provider handles it.
+Four independent purposes: document analysis/storage under the selected lifecycle; optional external AI processing; optional de-identified improvement telemetry; optional training/reference contribution. Never make training consent a prerequisite for analysis. A retained user resume is not a reference contribution. Explain what leaves the service, for what purpose, and which approved provider handles it.
 
 Confirmed client policy (2026-10-01): resumes remain active for 30 days from original upload; opening or editing does not extend the deadline. Automatic expiry moves the resume and its revisions into seven-day recovery, allowing up to 37 days in live storage. Manual deletion also enters seven-day recovery. Trash must be excluded from normal analysis/export and accessible only through owner-authorized recovery controls. Restoration must not silently restart the upload clock; specify post-expiry restoration behavior before implementation. Failed/quarantined temporary artifacts, operational audit records and backup expiry require separate approved schedules. No policy here is implemented yet; missing lifecycle controls block hosted ingestion.
 
