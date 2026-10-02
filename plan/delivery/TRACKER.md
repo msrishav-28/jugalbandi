@@ -18,9 +18,9 @@ Initial “—” means not performed/not assigned, never success. Source files 
 
 | Task | Phase | Priority | Requirements | Dependencies | Gate categories | Owner | Reviewer | State | Evidence | Verified date | Revision/fingerprint | Next action or blocker |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-004 | 2026-10-02 | DOCSET-2026-10-02-v6 | Markdown aligned for local use; hosted task sequence must be reconsidered before implementation |
+| [GL-DOCS-001](WORK_PACKAGES.md#gl-docs-001) | M0 | P0 | GL-R-063, GL-R-064 | — | A-DOC-001 | Codex | Self-review only | VERIFIED | EV-DOC-004 | 2026-10-02 | DOCSET-2026-10-02-v7 | Markdown aligned for local use; hosted task sequence must be reconsidered before implementation |
 | [GL-BASE-001](WORK_PACKAGES.md#gl-base-001) | M0 | P0 | GL-R-002 | GL-DOCS-001 | G-BASE | Unassigned | Unassigned | BLOCKED | — | — | — | Revalidate handbook; remote provenance inspected and separate clone acquired |
-| [GL-BASE-002](WORK_PACKAGES.md#gl-base-002) | M0 | P0 | GL-R-003 | GL-DOCS-001 | — | Unassigned | Unassigned | BLOCKED | EV-BRAND-001 | — | — | Python/dependencies installed; native-library policy and production font fetch block full baseline |
+| [GL-BASE-002](WORK_PACKAGES.md#gl-base-002) | M0 | P0 | GL-R-003 | GL-DOCS-001 | — | Codex | Self-review only | BLOCKED | EV-LOCAL-001 | — | — | Windows test-loop startup repaired; 54 targeted tests pass; application imports still blocked by Application Control; build font blocker unchanged |
 | [GL-BASE-003](WORK_PACKAGES.md#gl-base-003) | M0 | P0 | GL-R-068 | GL-BASE-001, GL-BASE-002 | — | Unassigned | Unassigned | NOT_STARTED | — | — | — | Verify dependencies and scope before claim |
 | [GL-BASE-004](WORK_PACKAGES.md#gl-base-004) | M0 | P0 | GL-R-001 | GL-BASE-002 | — | Unassigned | Unassigned | NOT_STARTED | — | — | — | Verify dependencies and scope before claim |
 | [GL-QA-001](WORK_PACKAGES.md#gl-qa-001) | M0 | P0 | GL-R-055 | GL-BASE-002 | — | Unassigned | Unassigned | NOT_STARTED | — | — | — | Verify dependencies and scope before claim |
@@ -87,3 +87,7 @@ Owner: Codex. Reviewer: author self-review, documentation only. Approval: A-DOC-
 ## Documentation alignment claim — 2026-10-02
 
 GL-DOCS-001 owner: Codex; reviewer: self-review only. Approval: A-DOC-003. Edit boundary: tracked Markdown, documentation audit and fingerprints only. Reconcile local-use direction, current manifests and later client decisions; preserve original source plans and attribution. Checkpoint: documentation checks and branch push; no deployment or application changes.
+
+## Local test repair claim — 2026-10-02
+
+GL-BASE-002 owner: Codex; reviewer: self-review. Approval: A-START-001 and client request to begin code. Boundary: backend test network-guard fixture, regression coverage and delivery evidence. Reproduced eight locale-test setup errors because the Windows event loop needs its internal socket pair before the outbound guard is installed. Keep outbound connections denied during tests and preserve disposable database isolation. No product, dependency or hosting changes. Checkpoint: targeted checks, remaining blocker report and feature-branch push.

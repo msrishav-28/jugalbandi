@@ -1,5 +1,5 @@
 {
-  "id": "DOCSET-2026-10-02-v6",
+  "id": "DOCSET-2026-10-02-v7",
   "recorded_at": "2026-10-02",
   "scope": "Stable documentation inputs; tracker/evidence/handoff are mutable and excluded; this manifest is not a runtime product verification.",
   "files": {
@@ -10,7 +10,7 @@
     "plan/delivery/DATA_AND_PRIVACY.md": "1571d933d4bc0fd085740d831d960b2a1be024072a07c125ea334f53154fba23",
     "plan/delivery/DECISIONS_AND_APPROVALS.md": "b5c01ef907ac44645fbcb65403012081d7bf4f886849167b33dc14bc6700a0f7",
     "plan/delivery/OPERATIONS.md": "0f1988949a449472eb3c1671e16d5071caabd8260fd315765b33505f485a534e",
-    "plan/delivery/PROJECT_MAP.md": "1edadf6028fec0722d617cf43b3660fd4fe76acc8d885c2bf70be7983cd41dfe",
+    "plan/delivery/PROJECT_MAP.md": "14bb2106e5eee0e861a5f14c1e90396b04fba053113d3af63b9451e64522e52a",
     "plan/delivery/README.md": "18038becfead04215e99d896adbebfed6dca5b11ecc7fc418c0a93835dff3b80",
     "plan/delivery/REQUIREMENTS.md": "0f06b90c29472658d71a9e09643bb7cfeb85e803cc527ebd25417d5ab1a65e23",
     "plan/delivery/SECURITY.md": "38084933ed482024ba9262a02f259d679e7046011284cbc134fc554a81b51f30",
@@ -20,7 +20,7 @@
     "plan/delivery/validate-docs.cjs": "a7c0314a0d148bb42a7c269e7015384a682105ec1c60bfc4e3aea7a1c29b554f",
     "plan/delivery/validate-docs.test.cjs": "7d67004dfbe92dee42e47e3389d1f3aa7238127bdfd66e3c82ddee2587b46769",
     "plan/delivery/VERIFICATION.md": "925da72d498f7151815d3a17d99ce442ab91fd2baa6e8475db8d8732c98f14e0",
-    "plan/delivery/WORK_PACKAGES.md": "6e14658c254f739a078e40bd51cab981109292aae3558587bc50bdcc5b58480b",
+    "plan/delivery/WORK_PACKAGES.md": "9b392f16f6a99fc877de4cf1471cb1ba9706b8099c81505cc416b751f5e684b9",
     ".claude/CLAUDE.md": "ad64e086d05c8788dc6de9e8d196bf6630c0cc0e21b312253be83e08eb414c59",
     ".githooks/README.md": "30aef84e1997a18f8e35ec342f3f193abcaf102c0d3cbdb59b891be6921ab4b7",
     ".github/CODE_OF_CONDUCT.md": "163f5fc76548852d1e443c2e7ea9f2fcb19e01f3857cde349e7d5444659497b3",

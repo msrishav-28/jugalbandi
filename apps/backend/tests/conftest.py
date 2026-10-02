@@ -5,7 +5,7 @@ import os
 import socket
 import sys
 import tempfile
-from collections.abc import AsyncIterator, Iterator
+from collections.abc import AsyncIterator
 from pathlib import Path
 from typing import Any, NoReturn
 
@@ -53,12 +53,16 @@ def backend_test_data_dir() -> Path:
 
 
 @pytest.fixture(autouse=True)
-def deny_external_network(monkeypatch: pytest.MonkeyPatch) -> Iterator[None]:
+async def deny_external_network(monkeypatch: pytest.MonkeyPatch) -> AsyncIterator[None]:
     """Make accidental provider traffic fail before opening a socket.
 
     ASGITransport and respx-backed HTTP tests do not open sockets and continue
     to exercise their real in-process transports. Tests requiring an actual
     network connection must explicitly replace this guard at their boundary.
+
+    An async fixture lets pytest initialize its event loop first. On Windows,
+    that loop creates an internal socket pair; blocking it prevents test setup.
+    Application connections remain blocked once this fixture yields.
     """
 
     def blocked_connection(*args: Any, **kwargs: Any) -> NoReturn:

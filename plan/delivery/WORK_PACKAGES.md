@@ -62,7 +62,7 @@ GL-QA-001 may proceed alongside baseline work. GL-STORAGE-001 and GL-JOBS-001 ca
 - **Requirements:** GL-R-003; source sections follow those requirement rows.
 - **Depends on:** GL-DOCS-001.
 - **Approval references:** No additional gate for read-only/synthetic work; root approval rules still apply.
-- **Edit boundary and reuse:** Local tooling diagnosis and setup documentation; manifests only with separate approval.
+- **Edit boundary and reuse:** Local tooling diagnosis, test-isolation fixture repairs with regression coverage, and setup documentation; manifests only with separate approval.
 - **Behavior / interfaces:** Diagnose broken Python launcher; locate compatible Python >=3.13 without reusing unrelated virtual environments. Verify Node/npm/uv, registry origins, lock behavior and browser requirements. Propose reproducible installation before dependency changes.
 - **Acceptance:** Fresh isolated setup reproduces declared versions; test commands use disposable data and blocked external AI; absent tools are explicit blockers.
 - **Verification / client proof:** Version probes then approved isolated install; run baseline commands from VERIFICATION.

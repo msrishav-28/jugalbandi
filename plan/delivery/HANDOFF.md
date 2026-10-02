@@ -2,7 +2,7 @@
 
 ## Latest checkpoint — 2026-10-02
 
-Documentation alignment is completed subject to the evidence recorded in EV-DOC-004. Local installation is the default; no hosting is being set up. Earlier hosted-beta task dependencies require applicability review before product implementation. Prior dated sections below are history, not permission to deploy. Read the live tracker, [audit register](MARKDOWN_AUDIT.md) and latest decisions first.
+Documentation alignment is complete (EV-DOC-004). The first code checkpoint repairs Windows test setup; 54 targeted backend tests pass (EV-LOCAL-001). Full application imports remain blocked by Windows Application Control; do not bypass it. Local installation is the default; no hosting is being set up. Earlier hosted-beta task dependencies require applicability review before product implementation. Prior dated sections below are history, not permission to deploy. Read the live tracker, [audit register](MARKDOWN_AUDIT.md) and latest decisions first.
 
 Dated 2026-10-01 (Asia/Calcutta). Live status belongs to [TRACKER](TRACKER.md). Owner: Codex; bounded rename author self-review only.
 
@@ -20,7 +20,7 @@ Client authorized starting code and safe branch pushes; renamed product Jugalban
 
 ## Next safe action
 
-First reconcile the existing analyzer task dependencies for local installation. Do not start hosted-account or infrastructure work from the older milestone sequence. The following baseline checks still apply.
+First obtain an authorized development environment in which the existing tiktoken dependency can load, then rerun the recorded application checks. The test-loop startup bug is fixed; do not repeat that diagnosis. Reconcile the existing analyzer task dependencies for local installation. Do not start hosted-account or infrastructure work from the older milestone sequence. The following baseline checks still apply.
 
 
 Inspect Git status and latest branch commit; run node plan/delivery/validate-docs.cjs. Resolve GL-BASE-002's native-library policy with an authorized development environment; do not bypass OS protection. Re-run the backend identity regression and existing baseline suites. Retry production build once fonts are reachable, then verify actual-font browser rendering. Continue GL-BASE-003/004; present concrete account/data proposals before their protected changes. Do not mistake implementation assignment or name change for deployment permission.
